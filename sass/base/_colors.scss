@@ -1,0 +1,20 @@
+$blood-red: #b83020;
+$grey: #222;
+$silver-grey: #dfe5e8;
+$somekindof-yellow: #fde07f;
+
+$bg: adjust-lightness(aliceblue, -10%);
+
+$text-color: $grey;
+$form-color: $grey;
+
+$link-color: $grey;
+$link-hover-color: $grey;
+
+$form-submit-bg: $blood-red;
+$form-submit-bg-hover: adjust-lightness($blood-red, -7%);
+$form-submit-bg-active: adjust-lightness($blood-red, -14%);
+
+$message-green: #c2f75f;
+$message-yellow: #fff05d;
+$message-red: #f7765f;

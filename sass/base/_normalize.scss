@@ -1,0 +1,61 @@
+/**
+ * admin tabs
+ */
+.pane-page-tabs,
+div.tabs {
+  //margin: 1em 0;
+  .tabs {
+    @include horizontal-menu;
+    margin: 15px 0;
+    li {
+      a {
+        @include button-link;
+        border: 1px solid $silver-grey;
+        border-radius: 2px;
+        height: 30px;
+        line-height: 26px;
+        margin-right: 1em;
+        padding: 0 12px;
+        &.active,
+        &:hover {
+          background: $silver-grey;
+          @include single-transition(background-color, 0.3s, false, ease);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * messages
+ */
+.drupal-messages {
+  > .messages {
+    border-radius: 2px;
+    font-weight: bold;
+    padding: 10px 20px 10px 60px;
+    margin: 1em 0;
+    background: $message-green url('../img/messages.png') 10px 50% no-repeat;
+  }
+  > .error {
+    background-color: $message-red;
+  }
+  > .warning {
+    background-color: $message-yellow;
+  }
+  > .status {
+    background-color: $message-green;
+  }
+}
+
+/**
+ * IPE
+ */
+.panels-ipe-editing .panels-ipe-region {
+  padding: 10px;
+  border: 2px dashed #999;
+}
+
+div.panels-ipe-placeholder {
+  border: none;
+}

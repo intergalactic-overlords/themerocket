@@ -1,0 +1,36 @@
+
+; Theme Info -----------------------------------------------------------------
+; required information about the theme
+
+name = Theme Rocket
+description = html5 base/starter theme, used with panels
+core = 7.x
+engine = phptemplate
+
+; Stylesheets  ---------------------------------------------------------------
+; We use [screen] instead of [all] to avoid browser styles affecting
+; other media types. IE stylesheets are loaded through template.php
+
+stylesheets[screen][] = css/screen.css
+
+; Regions --------------------------------------------------------------------
+; these content regions are available for block placement
+; some are special hidden regions: page_top, page_bottom, and help
+
+; these are the stock regions
+regions[header] = Header
+regions[navigation] = Navigation
+regions[footer] = Footer
+regions[content] = Content
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[help] = Help
+
+; Options --------------------------------------------------------------------
+; these are the checkboxes that are available on the theme settings page.
+
+; additional theme settings
+settings[themerocket_shim]    = 1
+
+plugins[panels][layouts] = panels/layouts
+plugins[panels][styles] = panels/styles

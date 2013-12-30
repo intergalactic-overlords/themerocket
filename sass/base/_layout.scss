@@ -1,0 +1,113 @@
+// breakpoints
+$large: 960px;
+
+$footer-height: 150px;
+$footer-top-margin: 50px;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+#navigation {
+}
+#main-wrapper {
+}
+#navigation {
+  margin: 40px 0;
+}
+#footer {
+  margin-top: 40px;
+}
+
+.section {
+  padding: 0 10px;
+  width: 100%;
+}
+
+#page-wrapper {
+  min-height: 100%;
+}
+
+#page {
+  min-height: 100%;
+  width: 100%;
+  /*@include breakpoint($breakpoint-desktop) {
+    margin: 0 auto;
+    max-width: $breakpoint-desktop;
+  }*/
+  > #main-wrapper {
+    margin-bottom: 30px;
+    //overflow: auto;
+    //padding-bottom: $footer-height + $footer-top-margin;
+  }
+}
+
+.main {
+  @include span-columns(12 omega, 12);
+  .block-system {
+    padding: 0;
+  }
+  .panels-inner {
+    padding: 10px;
+  }
+  .panel-display {
+    margin: 0;
+    padding: 0;
+    .panel-panel {
+      @extend .clearfix;
+      clear: both;
+      width: 100%;
+      > .inside {
+        //background: beige;
+      }
+    }
+    .panel-pane {
+      margin-bottom: 20px;
+    }
+    .panel-separator {
+      display: none;
+    }
+  }
+}
+
+/*@include breakpoint($breakpoint-desktop) {
+  #page {
+    margin: 0 auto;
+    max-width: $breakpoint-desktop;
+  }
+  #footer {
+    clear: both;
+    margin-top: 20px;
+    //margin-top: -($footer-height);
+    //padding-bottom: 30px;
+    position: relative;
+    .section {
+      //height: $footer-height;
+      margin: 0 auto;
+      max-width: $breakpoint-desktop;
+      //padding: 0 30px;
+    }
+  }
+}
+
+/**
+ *
+ */
+.panel-2col,
+.panel-2col-stacked {
+  .panel-col-first {
+    float: left;
+    width: 81.25%;
+  }
+  .panel-col-last {
+    float: right;
+    width: 12.5%;
+  }
+}
+
+.panel-separator {
+  display: none;
+}

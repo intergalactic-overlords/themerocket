@@ -1,0 +1,365 @@
+/**
+ * Typography
+ *
+ * All typography settings belong in this file.
+ * px to em converter: pxtoem.com
+ *
+ * If you change the base-font-size, check your grid settings in base/layout.scss
+ */
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-font-family: 'Rosario', sans-serif;
+
+// The font sizes for h1-h6.
+$h1-font-size: 1.8    * $base-font-size !default;
+$h2-font-size: 1.375  * $base-font-size !default;
+$h3-font-size: 1.17   * $base-font-size !default;
+$h4-font-size: 1      * $base-font-size !default;
+$h5-font-size: 0.83   * $base-font-size !default;
+$h6-font-size: 0.75   * $base-font-size !default;
+
+
+// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+//    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+html {
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: 1em; /* 14px */
+  font-weight: 400;
+  line-height: 1.357;
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-font-smoothing: antialiased;
+  ::selection,
+  ::-moz-selection {
+    //color: $selected-text-color;
+    //background: $selected-text-background-color;
+  }
+}
+
+a {
+  color: $link-color;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+// Addresses font-family inconsistency between 'textarea' and other form elements.
+button,
+input,
+select,
+textarea {
+  //color: $nightBlue;
+  font-family: $base-font-family;
+}
+
+input,
+select,
+textarea {
+  color: $form-color;
+}
+
+
+/* Line-heights */
+
+h1 {
+  //color: $skyBlue;
+  @include adjust-font-size-to($h1-font-size);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+h2 {
+  //color: $nightBlue;
+  @include adjust-font-size-to($h2-font-size);
+  font-weight: 700;
+  line-height: 25px;
+
+  &.pane-title {
+    line-height: 1;
+  }
+}
+
+h3 {
+  @include adjust-font-size-to($h3-font-size);
+  font-weight: 700;
+}
+
+h4 {
+  @include adjust-font-size-to($h4-font-size);
+  font-weight: 700;
+}
+
+h5 {
+  @include adjust-font-size-to($h5-font-size);
+  font-weight: 700;
+}
+
+h6 {
+  @include adjust-font-size-to($h6-font-size);
+  font-weight: 400;
+}
+
+b, strong {
+  font-weight: 700 !important;
+}
+
+ol, ul {
+  padding-left: 20px;
+}
+ol {
+  list-style: decimal;
+}
+ul {
+  list-style: disc;
+}
+
+/**
+ * form elements
+ */
+input {
+  font-size: 1em;
+}
+select,
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  border: 1px solid $silver-grey;
+  border-radius: 2px;
+  padding: 0 10px;
+  -webkit-appearance: none;
+}
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"] {
+  height: 30px;
+  line-height: 28px;
+  width: 100%;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  width: auto;
+}
+.webform-component-select {
+  position: relative;
+  &:after {
+    background: white;
+    bottom: 9px;
+    content: " ";
+    display: block;
+    height: 21px;
+    pointer-events: none;
+    position: absolute;
+    right: 33px;
+    width: 15px;
+    z-index: 3000;
+  }
+}
+select {
+  background: url(../images/select-arrow.png) no-repeat right center;
+  height: 33px;
+  padding: 6px 32px 4px 10px;
+  position: relative;
+  width: 100%;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: $silver-grey;
+  border: 1px solid $silver-grey;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 32px;
+  line-height: 26px;
+  margin: 0;
+}
+input[type="submit"] {
+  background: $form-submit-bg;
+  border-color: $form-submit-bg;
+  color: white;
+  @include single-transition(background-color, 0.3s, false, ease);
+  &:hover,
+  &:focus{
+    background: $form-submit-bg-hover;
+    border-color: $form-submit-bg-hover;
+  }
+  &:active {
+    background: $form-submit-bg-active;
+    border-color: $form-submit-bg-active;
+  }
+}
+// Re-set default cursor for disabled elements
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+html.js input.form-autocomplete {
+  background: url(../images/throbber.gif) no-repeat 100% 17px;
+}
+html.js input.throbbing {
+  background-position: 100% -29px;
+}
+
+textarea {
+  padding: 6px 10px;
+}
+form .description {
+  font-size: 0.8em;
+}
+.webform-component-checkbox {
+  .form-checkboxes {
+    float: left;
+    margin-right: 1em;
+    margin-top: -2px;
+  }
+}
+.form-item {
+  margin-bottom: 1em;
+  > label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .description {
+    font-size: 0.75em;
+    margin-top: 4px;
+  }
+}
+.views-exposed-widget > label {
+  font-weight: 700;
+}
+.form-checkboxes,
+.form-radios{
+  .form-item {
+    margin-bottom: 0.5em;
+  }
+}
+.form-type-checkbox,
+.form-type-radio {
+  > label {
+    //color: $base-text-color;
+    display: inline;
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+  tr {
+    //border-top: 1px solid $tableBorder;
+    //border-bottom: 1px solid $tableBorder;
+    &.odd {
+      //background: $lightGreyBlue;
+    }
+  }
+  thead {
+    border-bottom: 3px solid $text-color;
+    tr {
+      background: $bg;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid $text-color;
+    }
+    td, th {
+      vertical-align: top;
+    }
+  }
+  td,
+  th {
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    font-weight: 700;
+  }
+}
+
+blockquote {
+  font-size: 2em;
+  font-style: italic;
+  line-height: 1.25;
+  padding: 0 2em;
+  text-align: center;
+  p {
+    display: inline;
+  }
+  &:before {
+    content: '“';
+  }
+  &:after {
+    content: '”';
+  }
+}
+
+/**
+ * general content
+ */
+.wysiwyg {
+  p,
+  ol,
+  ul,
+  table,
+  blockquote,
+  h2,
+  h3,
+  h4 {
+    margin: 1em 0;
+    &:first-child {
+      margin: 0 0 1em;
+    }
+  }
+  ol, ul {
+    padding-left: 20px;
+    ol, ul {
+      margin: 0;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+  }
+  p > blockquote {
+    margin: 0;
+  }
+  img {
+    display: block;
+    margin: 0.5em 0;
+  }
+  a {
+    //color: $skyBlue;
+  }
+  .img-float-left {
+    float: left;
+    margin-right: 20px;
+  }
+  .img-float-right {
+    float: right;
+    margin-left: 20px;
+  }
+}

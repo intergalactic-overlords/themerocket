@@ -1,0 +1,103 @@
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// hidden
+@mixin hidden {
+  position: absolute;
+  left: -9999em;
+}
+
+// Menu
+// -------------------------
+@mixin menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+// Button style
+// ------------------------
+@mixin button-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+// Vertical menu (mobile)
+// -------------------------
+@mixin vertical-menu {
+  @include menu;
+  li {
+    display: block;
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+  > li {
+    &.expanded {
+      ul.menu {
+        @include hidden;
+      }
+    }
+  }
+}
+
+// Horizontal menu
+// -------------------------
+@mixin horizontal-menu {
+  @include menu;
+  font-size: 0;
+  li {
+    display: inline-block;
+    font-size: $base-font-size;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+
+    }
+  }
+  > li {
+    > a {
+      @include button-link;
+    }
+    &.expanded {
+      position: relative;
+      ul.menu {
+        @include hidden;
+        background: $bg;
+        padding: 0 10px;
+        li {
+          display: block;
+        }
+      }
+      &:hover {
+        ul.menu {
+          left: 0;
+          z-index: 99;
+        }
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+

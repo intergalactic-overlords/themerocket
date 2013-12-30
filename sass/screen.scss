@@ -1,0 +1,34 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import 'toolkit'; //https://github.com/Team-Sass/toolkit
+@import 'susy';
+
+@import 'breakpoint'; //http://breakpoint-sass.com/
+
+@import "compass/reset";
+@import "compass/css3";
+
+// Turn off media-query output for IE-only stylesheets.
+// $breakpoint-media-output: <boolean>;
+$breakpoint-media-output: true;
+
+//Turn off media-query fallback output for non-IE stylesheets.
+// $breakpoint-ie-output: <boolean>;
+$breakpoint-ie-output: false;
+
+/* ---------- Import base ---------- */
+
+@import 'base/variables';
+@import 'base/colors';
+
+@import 'base/mixins-extendables';
+
+@import 'base/normalize';
+@import 'base/layout';
+@import 'base/typography';
+
+@import 'features/design';
+@import 'features/search';

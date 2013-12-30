@@ -1,0 +1,32 @@
+/**
+ * searchpage
+ */
+.page-search {
+  .region-content {
+    .search-form {
+      background: $silver-grey;
+      margin-bottom: 30px;
+      padding: 20px;
+      label {
+        display: block;
+        margin-bottom: 0.5em;
+      }
+      input[type="text"] {
+        margin-bottom: 0.5em;
+      }
+    }
+    .view-mode-search_result {
+      margin: 20px 0;
+    }
+  }
+}
+
+ol.search-results {
+  padding: 0;
+  li {
+    margin-bottom: 1.25em;
+    h3 {
+      margin-bottom: 0.75em;
+    }
+  }
+}
