@@ -59,3 +59,22 @@ div.tabs {
 div.panels-ipe-placeholder {
   border: none;
 }
+
+/**
+ * draggable
+ */
+.tabledrag-toggle-weight-wrapper {
+  font-size: 0.75em;
+  margin-bottom: 0.25em;
+}
+table.tabledrag-processed {
+  table-layout: auto;
+}
+td.field-multiple-drag {
+  width: 50px;
+}
+a.tabledrag-handle .handle {
+  background-position: 6px 10px;
+  height: 25px;
+  width: 25px;
+}

@@ -39,19 +39,13 @@ body {
     max-width: $breakpoint-desktop;
   }*/
   > #main-wrapper {
-    margin-bottom: 30px;
-    //overflow: auto;
-    //padding-bottom: $footer-height + $footer-top-margin;
   }
 }
 
-.main {
-  @include span-columns(12 omega, 12);
+#main {
+  //@include span-columns(12 omega, 12);
   .block-system {
     padding: 0;
-  }
-  .panels-inner {
-    padding: 10px;
   }
   .panel-display {
     margin: 0;
@@ -65,7 +59,7 @@ body {
       }
     }
     .panel-pane {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
     .panel-separator {
       display: none;
@@ -73,7 +67,8 @@ body {
   }
 }
 
-/*@include breakpoint($breakpoint-desktop) {
+
+@include breakpoint($breakpoint-desktop) {
   #page {
     margin: 0 auto;
     max-width: $breakpoint-desktop;
@@ -110,4 +105,11 @@ body {
 
 .panel-separator {
   display: none;
+}
+
+/**
+ * Views
+ */
+.views-row {
+  margin-bottom: 20px;
 }

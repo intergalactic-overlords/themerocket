@@ -1,6 +1,8 @@
 $blood-red: #b83020;
 $grey: #222;
 $silver-grey: #dfe5e8;
+$cloud-grey: adjust-lightness($silver-grey, -20%);
+
 $somekindof-yellow: #fde07f;
 
 $bg: adjust-lightness(aliceblue, -10%);
@@ -14,6 +16,10 @@ $link-hover-color: $grey;
 $form-submit-bg: $blood-red;
 $form-submit-bg-hover: adjust-lightness($blood-red, -7%);
 $form-submit-bg-active: adjust-lightness($blood-red, -14%);
+
+$form-button-bg: $cloud-grey;
+$form-button-bg-hover: adjust-lightness($cloud-grey, -7%);
+$form-button-bg-active: adjust-lightness($cloud-grey, -14%);
 
 $message-green: #c2f75f;
 $message-yellow: #fff05d;

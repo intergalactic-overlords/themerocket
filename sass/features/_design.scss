@@ -1,5 +1,4 @@
 #page-wrapper {
-  background: beige;
 }
 
 #page {
@@ -35,18 +34,37 @@
   > .section {
     background: $bg;
     position: relative;
+    @media (max-width: $breakpoint_desktop - 1) {
+      overflow: hidden;
+    }
   }
   .block-menu-block {
     > h2 {
+      background: url(../images/menu.png) no-repeat right -25px;
+      cursor: pointer;
       height: 3em;
       line-height: 3em;
       margin: 0 -10px;
       padding: 0 10px;
       &:hover {
-        background: adjust-lightness($bg, -10%);
+        background-color: adjust-lightness($bg, -10%);
+        background-position: right 25px;
       }
       @media (min-width: $breakpoint_desktop) {
         @include hidden;
+      }
+    }
+    > .content {
+      @media (max-width: $breakpoint_desktop - 1) {
+        margin: 0 -10px;
+        //@include single-transition(height, 0.3s, false, ease);
+      }
+    }
+    &.closed {
+      > .content {
+        @media (max-width: $breakpoint_desktop - 1) {
+          @include hidden;
+        }
       }
     }
   }
@@ -59,7 +77,6 @@ nav.menu-name-main-menu > ul {
     font-size: 18px;
     height: 3em;
     line-height: 3em;
-    margin: 0 -10px;
     padding: 0 10px;
     @include single-transition(background-color, 0.3s, false, ease);
     &:hover,
@@ -71,6 +88,59 @@ nav.menu-name-main-menu > ul {
   }
   .nolink {
     cursor: default;
+  }
+  .expand-trigger {
+    display: none;
+  }
+  @media (max-width: $breakpoint_desktop - 1) {
+    > li {
+      &.expanded {
+        position: relative;
+        > a {
+          padding-right: 50px;
+        }
+        > .menu {
+          //@include single-transition(height, 0.3s, false, ease);
+          overflow: hidden;
+          a {
+            font-size: 16px;
+            height: 2.4em;
+            line-height: 2.4em;
+            padding: 0 20px;
+          }
+        }
+        .expand-trigger {
+          background: url(../images/menu.png) no-repeat center -175px;
+          border-left: 1px solid adjust-lightness($bg, 6%);
+          display: block;
+          font-size: 18px;
+          height: 3em;
+          line-height: 3em;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          right: 0;
+          text-indent: -9999em;
+          top: 0;
+          width: 62px;
+          &:hover {
+            background-color: adjust-lightness($bg, -10%);
+            background-position: center -225px;
+          }
+        }
+        &.closed {
+          > .menu {
+            @include hidden;
+          }
+          .expand-trigger {
+            background-position: center -75px;
+            &:hover {
+              background-position: center -125px;
+            }
+          }
+        }
+      }
+    }
   }
   @media (min-width: $breakpoint-desktop) {
     @include horizontal-menu;
@@ -85,6 +155,9 @@ nav.menu-name-main-menu > ul {
           font-weight: 700;
         }
       }
+    }
+    .expand-trigger {
+      display: none;
     }
   }
 }
@@ -160,158 +233,3 @@ nav.menu-name-main-menu > ul {
     }
   }
 }
-
-/**
- * Main menu
- */
-.primary_navigation {
-  /*h2 {
-    //background: $main-menu-bg url(../images/hamburger-menu.png) no-repeat right center;
-    color: white;
-    cursor: pointer;
-    display: block;
-    font-weight: 400;
-    height: 53px;
-    line-height: 53px;
-    margin-bottom: 0;
-    padding: 0 20px;
-  }*/
-  /*.block-menu-block {
-    &.open {
-      h2 {
-        //background-color: $main-menu-active-bg;
-      }
-      > ul.menu {
-        display: block;
-        margin: 0 1px;
-      }
-    }
-    > ul.menu {
-      @include menu;
-      display: none;
-      a {
-        //color: $main-menu-color;
-        display: block;
-        padding: 0 20px;
-        text-decoration: none;
-        white-space: nowrap;
-      }
-      li {
-        margin: 1px 0 0;
-        padding: 0;
-      }
-      > li {
-        > a {
-          //background: $main-menu-bg;
-          display: block;
-          font-size: 21px;
-          font-weight: 300;
-          height: 53px;
-          line-height: 53px;
-          text-decoration: none;
-          @include transition(background-color 0.5s ease, color 0.5s ease);
-          &:hover {
-            //background-color: $main-menu-hover-bg;
-          }
-        }
-        ul.menu {
-          //background: $main-menu-bg;
-          font-size: 16px;
-          li {
-            //background: $main-menu-bg;
-            margin: 0;
-          }
-          a {
-            border-top: 1px solid #80a6ae;
-            height: 42px;
-            line-height: 42px;
-            padding: 0 30px;
-            &:hover {
-              //background: $main-menu-sub-hover-bg;
-            }
-          }
-        }
-      }
-    }
-  }*/
-}
-/*@media (min-width: $breakpoint_desktop) {
-  .primary_navigation {
-    h2 {
-      display: none;
-    }
-    .block-menu-block {
-      > ul.menu {
-        @include horizontal-menu;
-        display: block;
-        margin: 0;
-        position: relative;
-        z-index: 999;
-        > li {
-          float: left;
-          position: relative;
-          > a {
-            text-align: center;
-          }
-          &.active {
-            > a {
-              margin: -12px -1px 0;
-              margin-top: -12px;
-              padding: 12px 40px 0 39px;
-              position: relative;
-              z-index: 2;
-              &:before,
-              &:after {
-                content: " ";
-                display: block;
-                position: absolute;
-                top: 0;
-              }
-              &:before {
-                height: 65px;
-                left: -3px;
-                width: 3px;
-                z-index: 5;
-              }
-              &:after {
-                height: 65px;
-                right: -3px;
-                width: 3px;
-                z-index: 5;
-              }
-            }
-          }
-          ul.menu {
-            background: transparent;
-            left: -9999em;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            @include transition(opacity 0.2s ease);
-            li {
-              display: block;
-              float: none;
-              margin: 0;
-              position: relative;
-              z-index: 99;
-              a {
-                border-top: none;
-                padding: 0 14px;
-                text-align: left;
-              }
-              &.first {
-                padding-top: 10px;
-              }
-            }
-          }
-          &:hover {
-            ul.menu {
-              left: 0;
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-}*/

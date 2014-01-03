@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 10, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/toolkit-0.2.1.3/stylesheets/toolkit/_border-box.scss */
+/* line 10, /Library/Ruby/Gems/1.8/gems/toolkit-0.2.1.3/stylesheets/toolkit/_border-box.scss */
 *,
 *:after,
 *:before {
@@ -11,13 +11,13 @@
   box-sizing: border-box;
 }
 
-/* line 4, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/toolkit-0.2.1.3/stylesheets/toolkit/_fluid-media.scss */
+/* line 4, /Library/Ruby/Gems/1.8/gems/toolkit-0.2.1.3/stylesheets/toolkit/_fluid-media.scss */
 img, video {
   max-width: 100%;
   height: auto;
 }
 
-/* line 17, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,68 +39,78 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
 /* ---------- Import base ---------- */
-/* line 4, ../sass/base/_mixins-extendables.scss */
-.clearfix, .main .panel-display .panel-panel {
+/* line 4, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
+.clearfix, #main .panel-display .panel-panel {
   *zoom: 1;
 }
-/* line 7, ../sass/base/_mixins-extendables.scss */
-.clearfix:before, .main .panel-display .panel-panel:before, .clearfix:after, .main .panel-display .panel-panel:after {
+/* line 7, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
+.clearfix:before, #main .panel-display .panel-panel:before, .clearfix:after, #main .panel-display .panel-panel:after {
   display: table;
-  content: "";
+  content: " ";
 }
-/* line 11, ../sass/base/_mixins-extendables.scss */
-.clearfix:after, .main .panel-display .panel-panel:after {
+/* line 11, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
+.clearfix:after, #main .panel-display .panel-panel:after {
   clear: both;
+}
+/* line 17, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
+li > .clearfix:before, #main .panel-display li > .panel-panel:before, li > .clearfix:after, #main .panel-display li > .panel-panel:after {
+  display: none;
+}
+
+/* line 29, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
+.hidden {
+  position: absolute;
+  left: -9999em;
 }
 
 /**
  * admin tabs
  */
-/* line 7, ../sass/base/_normalize.scss */
+/* line 7, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .pane-page-tabs .tabs,
 div.tabs .tabs {
   list-style: none;
@@ -109,13 +119,13 @@ div.tabs .tabs {
   font-size: 0;
   margin: 15px 0;
 }
-/* line 28, ../sass/base/_mixins-extendables.scss */
+/* line 43, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs li,
 div.tabs .tabs li {
   list-style: none;
   margin: 0;
 }
-/* line 67, ../sass/base/_mixins-extendables.scss */
+/* line 94, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs li,
 div.tabs .tabs li {
   display: inline-block;
@@ -124,43 +134,44 @@ div.tabs .tabs li {
   margin: 0;
   padding: 0;
 }
-/* line 78, ../sass/base/_mixins-extendables.scss */
+/* line 105, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li > a,
 div.tabs .tabs > li > a {
   display: inline-block;
   text-align: center;
   text-decoration: none;
 }
-/* line 81, ../sass/base/_mixins-extendables.scss */
+/* line 108, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li.expanded,
 div.tabs .tabs > li.expanded {
   position: relative;
 }
-/* line 83, ../sass/base/_mixins-extendables.scss */
+/* line 110, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li.expanded ul.menu,
 div.tabs .tabs > li.expanded ul.menu {
   position: absolute;
   left: -9999em;
   background: #bde0ff;
+  margin: 0;
   padding: 0 10px;
 }
-/* line 87, ../sass/base/_mixins-extendables.scss */
+/* line 115, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li.expanded ul.menu li,
 div.tabs .tabs > li.expanded ul.menu li {
   display: block;
 }
-/* line 92, ../sass/base/_mixins-extendables.scss */
+/* line 120, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li.expanded:hover ul.menu,
 div.tabs .tabs > li.expanded:hover ul.menu {
   left: 0;
   z-index: 99;
 }
-/* line 96, ../sass/base/_mixins-extendables.scss */
+/* line 124, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li.expanded:hover a,
 div.tabs .tabs > li.expanded:hover a {
   white-space: nowrap;
 }
-/* line 11, ../sass/base/_normalize.scss */
+/* line 11, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .pane-page-tabs .tabs li a,
 div.tabs .tabs li a {
   display: inline-block;
@@ -173,7 +184,7 @@ div.tabs .tabs li a {
   margin-right: 1em;
   padding: 0 12px;
 }
-/* line 20, ../sass/base/_normalize.scss */
+/* line 20, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .pane-page-tabs .tabs li a.active, .pane-page-tabs .tabs li a:hover,
 div.tabs .tabs li a.active,
 div.tabs .tabs li a:hover {
@@ -187,7 +198,7 @@ div.tabs .tabs li a:hover {
 /**
  * messages
  */
-/* line 33, ../sass/base/_normalize.scss */
+/* line 33, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .drupal-messages > .messages {
   border-radius: 2px;
   font-weight: bold;
@@ -195,15 +206,15 @@ div.tabs .tabs li a:hover {
   margin: 1em 0;
   background: #c2f75f url("../img/messages.png") 10px 50% no-repeat;
 }
-/* line 40, ../sass/base/_normalize.scss */
+/* line 40, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .drupal-messages > .error {
   background-color: #f7765f;
 }
-/* line 43, ../sass/base/_normalize.scss */
+/* line 43, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .drupal-messages > .warning {
   background-color: #fff05d;
 }
-/* line 46, ../sass/base/_normalize.scss */
+/* line 46, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .drupal-messages > .status {
   background-color: #c2f75f;
 }
@@ -211,18 +222,44 @@ div.tabs .tabs li a:hover {
 /**
  * IPE
  */
-/* line 54, ../sass/base/_normalize.scss */
+/* line 54, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 .panels-ipe-editing .panels-ipe-region {
   padding: 10px;
   border: 2px dashed #999;
 }
 
-/* line 59, ../sass/base/_normalize.scss */
+/* line 59, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
 div.panels-ipe-placeholder {
   border: none;
 }
 
-/* line 8, ../sass/base/_layout.scss */
+/**
+ * draggable
+ */
+/* line 66, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
+.tabledrag-toggle-weight-wrapper {
+  font-size: 0.75em;
+  margin-bottom: 0.25em;
+}
+
+/* line 70, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
+table.tabledrag-processed {
+  table-layout: auto;
+}
+
+/* line 73, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
+td.field-multiple-drag {
+  width: 50px;
+}
+
+/* line 76, /Users/joachimverbeke/Sites/themerocket/sass/base/_normalize.scss */
+a.tabledrag-handle .handle {
+  background-position: 6px 10px;
+  height: 25px;
+  width: 25px;
+}
+
+/* line 8, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 html,
 body {
   height: 100%;
@@ -230,28 +267,28 @@ body {
   position: relative;
 }
 
-/* line 18, ../sass/base/_layout.scss */
+/* line 18, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 #navigation {
   margin: 40px 0;
 }
 
-/* line 21, ../sass/base/_layout.scss */
+/* line 21, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 #footer {
   margin-top: 40px;
 }
 
-/* line 25, ../sass/base/_layout.scss */
+/* line 25, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 .section {
   padding: 0 10px;
   width: 100%;
 }
 
-/* line 30, ../sass/base/_layout.scss */
+/* line 30, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 #page-wrapper {
   min-height: 100%;
 }
 
-/* line 34, ../sass/base/_layout.scss */
+/* line 34, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 #page {
   min-height: 100%;
   width: 100%;
@@ -260,85 +297,76 @@ body {
     max-width: $breakpoint-desktop;
   }*/
 }
-/* line 41, ../sass/base/_layout.scss */
-#page > #main-wrapper {
-  margin-bottom: 30px;
-}
 
-/* line 48, ../sass/base/_layout.scss */
-.main {
-  width: 100%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
-  display: inline;
-}
-/* line 50, ../sass/base/_layout.scss */
-.main .block-system {
+/* line 47, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
+#main .block-system {
   padding: 0;
 }
-/* line 53, ../sass/base/_layout.scss */
-.main .panels-inner {
-  padding: 10px;
-}
-/* line 56, ../sass/base/_layout.scss */
-.main .panel-display {
+/* line 50, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
+#main .panel-display {
   margin: 0;
   padding: 0;
 }
-/* line 59, ../sass/base/_layout.scss */
-.main .panel-display .panel-panel {
+/* line 53, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
+#main .panel-display .panel-panel {
   clear: both;
   width: 100%;
 }
-/* line 67, ../sass/base/_layout.scss */
-.main .panel-display .panel-pane {
-  margin-bottom: 20px;
+/* line 61, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
+#main .panel-display .panel-pane {
+  margin-bottom: 40px;
 }
-/* line 70, ../sass/base/_layout.scss */
-.main .panel-display .panel-separator {
+/* line 64, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
+#main .panel-display .panel-separator {
   display: none;
 }
 
-/*@include breakpoint($breakpoint-desktop) {
+@media (min-width: 960px) {
+  /* line 72, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
   #page {
     margin: 0 auto;
-    max-width: $breakpoint-desktop;
+    max-width: 960px;
   }
+
+  /* line 76, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
   #footer {
     clear: both;
     margin-top: 20px;
-    //margin-top: -($footer-height);
-    //padding-bottom: 30px;
     position: relative;
-    .section {
-      //height: $footer-height;
-      margin: 0 auto;
-      max-width: $breakpoint-desktop;
-      //padding: 0 30px;
-    }
+  }
+  /* line 82, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
+  #footer .section {
+    margin: 0 auto;
+    max-width: 960px;
   }
 }
-
 /**
  *
  */
-/* line 101, ../sass/base/_layout.scss */
+/* line 96, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 .panel-2col .panel-col-first,
 .panel-2col-stacked .panel-col-first {
   float: left;
   width: 81.25%;
 }
-/* line 105, ../sass/base/_layout.scss */
+/* line 100, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 .panel-2col .panel-col-last,
 .panel-2col-stacked .panel-col-last {
   float: right;
   width: 12.5%;
 }
 
-/* line 111, ../sass/base/_layout.scss */
+/* line 106, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
 .panel-separator {
   display: none;
+}
+
+/**
+ * Views
+ */
+/* line 113, /Users/joachimverbeke/Sites/themerocket/sass/base/_layout.scss */
+.views-row {
+  margin-bottom: 20px;
 }
 
 /**
@@ -349,7 +377,7 @@ body {
  *
  * If you change the base-font-size, check your grid settings in base/layout.scss
  */
-/* line 25, ../sass/base/_typography.scss */
+/* line 25, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 html {
   color: #222222;
   font-family: "Rosario", sans-serif;
@@ -364,16 +392,16 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 41, ../sass/base/_typography.scss */
+/* line 41, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 a {
   color: #222222;
 }
-/* line 44, ../sass/base/_typography.scss */
+/* line 44, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 a:hover, a:focus {
   color: #222222;
 }
 
-/* line 53, ../sass/base/_typography.scss */
+/* line 53, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 button,
 input,
 select,
@@ -381,7 +409,7 @@ textarea {
   font-family: "Rosario", sans-serif;
 }
 
-/* line 60, ../sass/base/_typography.scss */
+/* line 60, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 input,
 select,
 textarea {
@@ -389,70 +417,74 @@ textarea {
 }
 
 /* Line-heights */
-/* line 67, ../sass/base/_typography.scss */
+/* line 67, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 h1 {
   font-size: 1.8em;
   line-height: 1.66667em;
   font-weight: 700;
   line-height: 1.4;
+  margin: 0 0 1em;
 }
 
-/* line 74, ../sass/base/_typography.scss */
+/* line 75, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 h2 {
   font-size: 1.375em;
   line-height: 2.18182em;
   font-weight: 700;
   line-height: 25px;
+  margin: 0 0 1em;
 }
-/* line 80, ../sass/base/_typography.scss */
+/* line 82, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 h2.pane-title {
   line-height: 1;
 }
 
-/* line 85, ../sass/base/_typography.scss */
+/* line 87, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 h3 {
   font-size: 1.17em;
   line-height: 1.28205em;
   font-weight: 700;
+  margin: 0 0 1em;
 }
 
-/* line 90, ../sass/base/_typography.scss */
+/* line 93, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 h4 {
   font-size: 1em;
   line-height: 1.5em;
   font-weight: 700;
+  margin: 0 0 1em;
 }
 
-/* line 95, ../sass/base/_typography.scss */
+/* line 99, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 h5 {
   font-size: 0.83em;
   line-height: 1.80723em;
   font-weight: 700;
 }
 
-/* line 100, ../sass/base/_typography.scss */
+/* line 104, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 h6 {
   font-size: 0.75em;
   line-height: 2em;
   font-weight: 400;
 }
 
-/* line 105, ../sass/base/_typography.scss */
+/* line 109, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 b, strong {
   font-weight: 700 !important;
 }
 
-/* line 109, ../sass/base/_typography.scss */
+/* line 113, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 ol, ul {
   padding-left: 20px;
 }
 
-/* line 112, ../sass/base/_typography.scss */
+/* line 116, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 115, ../sass/base/_typography.scss */
+/* line 119, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 ul {
   list-style: disc;
 }
@@ -460,12 +492,12 @@ ul {
 /**
  * form elements
  */
-/* line 122, ../sass/base/_typography.scss */
+/* line 126, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 input {
   font-size: 1em;
 }
 
-/* line 137, ../sass/base/_typography.scss */
+/* line 141, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 select,
 input[type="text"],
 input[type="date"],
@@ -485,7 +517,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 153, ../sass/base/_typography.scss */
+/* line 157, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 input[type="text"],
 input[type="date"],
 input[type="datetime"],
@@ -502,17 +534,17 @@ input[type="url"] {
   width: 100%;
 }
 
-/* line 158, ../sass/base/_typography.scss */
+/* line 162, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   width: auto;
 }
 
-/* line 162, ../sass/base/_typography.scss */
+/* line 166, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .webform-component-select {
   position: relative;
 }
-/* line 164, ../sass/base/_typography.scss */
+/* line 168, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .webform-component-select:after {
   background: white;
   bottom: 9px;
@@ -526,30 +558,46 @@ input[type="search"] {
   z-index: 3000;
 }
 
-/* line 177, ../sass/base/_typography.scss */
+/* line 181, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 select {
-  background: url(../images/select-arrow.png) no-repeat right center;
+  background: white url(../images/select-arrow.png) no-repeat right center;
+  font-size: 16px;
   height: 33px;
   padding: 6px 32px 4px 10px;
   position: relative;
   width: 100%;
 }
 
-/* line 187, ../sass/base/_typography.scss */
+/* line 192, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background: #dfe5e8;
-  border: 1px solid #dfe5e8;
+  background: #a4b5bd;
+  border: 1px solid #a4b5bd;
   border-radius: 2px;
   cursor: pointer;
   height: 32px;
   line-height: 26px;
   margin: 0;
 }
+/* line 202, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+button + input[type="button"],
+button + input[type="reset"],
+button + input[type="submit"],
+input[type="button"] + input[type="button"],
+input[type="button"] + input[type="reset"],
+input[type="button"] + input[type="submit"],
+input[type="reset"] + input[type="button"],
+input[type="reset"] + input[type="reset"],
+input[type="reset"] + input[type="submit"],
+input[type="submit"] + input[type="button"],
+input[type="submit"] + input[type="reset"],
+input[type="submit"] + input[type="submit"] {
+  margin-left: 1em;
+}
 
-/* line 196, ../sass/base/_typography.scss */
+/* line 206, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 input[type="submit"] {
   background: #b83020;
   border-color: #b83020;
@@ -559,78 +607,94 @@ input[type="submit"] {
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-/* line 202, ../sass/base/_typography.scss */
+/* line 212, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 input[type="submit"]:hover, input[type="submit"]:focus {
   background: #9a281b;
   border-color: #9a281b;
 }
-/* line 206, ../sass/base/_typography.scss */
+/* line 216, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 input[type="submit"]:active {
   background: #7b2015;
   border-color: #7b2015;
 }
+/* line 222, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+input[type="submit"].field-add-more-submit, input[type="submit"]#edit-preview {
+  background: #a4b5bd;
+  border: 1px solid #a4b5bd;
+  margin-top: 1em;
+}
+/* line 227, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+input[type="submit"].field-add-more-submit:hover, input[type="submit"].field-add-more-submit:focus, input[type="submit"]#edit-preview:hover, input[type="submit"]#edit-preview:focus {
+  background: #8fa4ae;
+  border-color: #8fa4ae;
+}
+/* line 231, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+input[type="submit"].field-add-more-submit:active, input[type="submit"]#edit-preview:active {
+  background: #7a939f;
+  border-color: #7a939f;
+}
 
-/* line 213, ../sass/base/_typography.scss */
+/* line 239, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
 }
 
-/* line 217, ../sass/base/_typography.scss */
+/* line 243, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 html.js input.form-autocomplete {
   background: url(../images/throbber.gif) no-repeat 100% 17px;
 }
 
-/* line 220, ../sass/base/_typography.scss */
+/* line 246, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 html.js input.throbbing {
   background-position: 100% -29px;
 }
 
-/* line 224, ../sass/base/_typography.scss */
+/* line 250, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 textarea {
   padding: 6px 10px;
 }
 
-/* line 227, ../sass/base/_typography.scss */
+/* line 253, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 form .description {
   font-size: 0.8em;
 }
 
-/* line 231, ../sass/base/_typography.scss */
+/* line 257, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .webform-component-checkbox .form-checkboxes {
   float: left;
   margin-right: 1em;
   margin-top: -2px;
 }
 
-/* line 237, ../sass/base/_typography.scss */
+/* line 263, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .form-item {
   margin-bottom: 1em;
 }
-/* line 239, ../sass/base/_typography.scss */
+/* line 265, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .form-item > label {
   display: block;
   font-weight: 700;
   margin-bottom: 4px;
 }
-/* line 244, ../sass/base/_typography.scss */
+/* line 270, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .form-item .description {
   font-size: 0.75em;
   margin-top: 4px;
 }
 
-/* line 249, ../sass/base/_typography.scss */
+/* line 275, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .views-exposed-widget > label {
   font-weight: 700;
 }
 
-/* line 254, ../sass/base/_typography.scss */
+/* line 280, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .form-checkboxes .form-item,
 .form-radios .form-item {
   margin-bottom: 0.5em;
 }
 
-/* line 260, ../sass/base/_typography.scss */
+/* line 286, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .form-type-checkbox > label,
 .form-type-radio > label {
   display: inline;
@@ -638,41 +702,69 @@ form .description {
   font-weight: 400;
 }
 
-/* line 268, ../sass/base/_typography.scss */
+/* line 295, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+.container-inline-date > .form-item {
+  margin: 0;
+}
+/* line 298, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+.container-inline-date > .form-item label,
+.container-inline-date > .form-item .date-clear {
+  display: inline;
+}
+/* line 301, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+.container-inline-date > .form-item .date-padding {
+  padding: 0;
+}
+
+/* line 307, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+fieldset {
+  margin-bottom: 1em;
+}
+/* line 309, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+fieldset legend {
+  font-weight: 700;
+}
+/* line 312, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
+fieldset .fieldset-wrapper {
+  background: #eee;
+  padding: 10px;
+}
+
+/* line 318, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
   width: 100%;
 }
-/* line 280, ../sass/base/_typography.scss */
+/* line 330, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 table thead {
   border-bottom: 3px solid #222222;
 }
-/* line 282, ../sass/base/_typography.scss */
+/* line 332, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 table thead tr {
   background: #bde0ff;
 }
-/* line 287, ../sass/base/_typography.scss */
+/* line 337, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 table tbody tr {
   border-bottom: 1px solid #222222;
 }
-/* line 290, ../sass/base/_typography.scss */
+/* line 340, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 table tbody td, table tbody th {
   vertical-align: top;
 }
-/* line 295, ../sass/base/_typography.scss */
+/* line 345, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 table td,
 table th {
   padding: 10px;
   text-align: left;
 }
-/* line 299, ../sass/base/_typography.scss */
+/* line 349, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 table th {
   font-weight: 700;
 }
 
-/* line 304, ../sass/base/_typography.scss */
+/* line 354, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 blockquote {
   font-size: 2em;
   font-style: italic;
@@ -680,15 +772,15 @@ blockquote {
   padding: 0 2em;
   text-align: center;
 }
-/* line 310, ../sass/base/_typography.scss */
+/* line 360, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 blockquote p {
   display: inline;
 }
-/* line 313, ../sass/base/_typography.scss */
+/* line 363, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 blockquote:before {
   content: '“';
 }
-/* line 316, ../sass/base/_typography.scss */
+/* line 366, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 blockquote:after {
   content: '”';
 }
@@ -696,7 +788,7 @@ blockquote:after {
 /**
  * general content
  */
-/* line 332, ../sass/base/_typography.scss */
+/* line 382, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg p,
 .wysiwyg ol,
 .wysiwyg ul,
@@ -707,7 +799,7 @@ blockquote:after {
 .wysiwyg h4 {
   margin: 1em 0;
 }
-/* line 334, ../sass/base/_typography.scss */
+/* line 384, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg p:first-child,
 .wysiwyg ol:first-child,
 .wysiwyg ul:first-child,
@@ -718,44 +810,39 @@ blockquote:after {
 .wysiwyg h4:first-child {
   margin: 0 0 1em;
 }
-/* line 338, ../sass/base/_typography.scss */
+/* line 388, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg ol, .wysiwyg ul {
   padding-left: 20px;
 }
-/* line 340, ../sass/base/_typography.scss */
+/* line 390, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg ol ol, .wysiwyg ol ul, .wysiwyg ul ol, .wysiwyg ul ul {
   margin: 0;
 }
-/* line 343, ../sass/base/_typography.scss */
+/* line 393, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg ol li, .wysiwyg ul li {
   margin: 0.5em 0;
 }
-/* line 347, ../sass/base/_typography.scss */
+/* line 397, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg p > blockquote {
   margin: 0;
 }
-/* line 350, ../sass/base/_typography.scss */
+/* line 400, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg img {
   display: block;
   margin: 0.5em 0;
 }
-/* line 357, ../sass/base/_typography.scss */
+/* line 407, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg .img-float-left {
   float: left;
   margin-right: 20px;
 }
-/* line 361, ../sass/base/_typography.scss */
+/* line 411, /Users/joachimverbeke/Sites/themerocket/sass/base/_typography.scss */
 .wysiwyg .img-float-right {
   float: right;
   margin-left: 20px;
 }
 
-/* line 1, ../sass/features/_design.scss */
-#page-wrapper {
-  background: beige;
-}
-
-/* line 5, ../sass/features/_design.scss */
+/* line 4, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #page {
   background: white;
 }
@@ -763,16 +850,16 @@ blockquote:after {
 /**
  *
  */
-/* line 13, ../sass/features/_design.scss */
+/* line 12, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #page-title {
   margin-bottom: 1em;
 }
 
-/* line 17, ../sass/features/_design.scss */
+/* line 16, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #site-name {
   margin: 2em 0;
 }
-/* line 19, ../sass/features/_design.scss */
+/* line 18, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #site-name a {
   background: url(../images/themerocket-logo.svg) no-repeat top left;
   background-size: auto 120px;
@@ -782,98 +869,178 @@ blockquote:after {
   width: 120px;
 }
 
-/* line 30, ../sass/features/_design.scss */
+/* line 29, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #navigation,
 #main-wrapper {
   background: white;
 }
 
-/* line 35, ../sass/features/_design.scss */
+/* line 34, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #navigation > .section {
   background: #bde0ff;
   position: relative;
 }
-/* line 40, ../sass/features/_design.scss */
+@media (max-width: 959px) {
+  /* line 34, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  #navigation > .section {
+    overflow: hidden;
+  }
+}
+/* line 42, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #navigation .block-menu-block > h2 {
+  background: url(../images/menu.png) no-repeat right -25px;
+  cursor: pointer;
   height: 3em;
   line-height: 3em;
   margin: 0 -10px;
   padding: 0 10px;
 }
-/* line 45, ../sass/features/_design.scss */
+/* line 49, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #navigation .block-menu-block > h2:hover {
-  background: #8ac8ff;
+  background-color: #8ac8ff;
+  background-position: right 25px;
 }
 @media (min-width: 960px) {
-  /* line 40, ../sass/features/_design.scss */
+  /* line 42, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
   #navigation .block-menu-block > h2 {
     position: absolute;
     left: -9999em;
   }
 }
+@media (max-width: 959px) {
+  /* line 57, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  #navigation .block-menu-block > .content {
+    margin: 0 -10px;
+  }
+}
+@media (max-width: 959px) {
+  /* line 64, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  #navigation .block-menu-block.closed > .content {
+    position: absolute;
+    left: -9999em;
+  }
+}
 
-/* line 55, ../sass/features/_design.scss */
+/* line 73, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 nav.menu-name-main-menu > ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 28, ../sass/base/_mixins-extendables.scss */
+/* line 43, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul li {
   list-style: none;
   margin: 0;
 }
-/* line 46, ../sass/base/_mixins-extendables.scss */
+/* line 61, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul li {
   display: block;
 }
-/* line 48, ../sass/base/_mixins-extendables.scss */
+/* line 63, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul li a {
   display: block;
   text-decoration: none;
 }
-/* line 55, ../sass/base/_mixins-extendables.scss */
+/* line 70, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul > li.expanded ul.menu {
-  position: absolute;
-  left: -9999em;
+  margin: 0 10px;
+  padding-left: 0;
 }
-/* line 57, ../sass/features/_design.scss */
+/* line 75, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 nav.menu-name-main-menu > ul a {
   border-top: 1px solid #dceeff;
   font-size: 18px;
   height: 3em;
   line-height: 3em;
-  margin: 0 -10px;
   padding: 0 10px;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-/* line 66, ../sass/features/_design.scss */
+/* line 83, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 nav.menu-name-main-menu > ul a:hover, nav.menu-name-main-menu > ul a:focus {
   background: #8ac8ff;
   color: white;
   font-weight: 700;
 }
-/* line 72, ../sass/features/_design.scss */
+/* line 89, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 nav.menu-name-main-menu > ul .nolink {
   cursor: default;
 }
+/* line 92, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+nav.menu-name-main-menu > ul .expand-trigger {
+  display: none;
+}
+@media (max-width: 959px) {
+  /* line 97, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded {
+    position: relative;
+  }
+  /* line 99, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded > a {
+    padding-right: 50px;
+  }
+  /* line 102, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded > .menu {
+    overflow: hidden;
+  }
+  /* line 105, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded > .menu a {
+    font-size: 16px;
+    height: 2.4em;
+    line-height: 2.4em;
+    padding: 0 20px;
+  }
+  /* line 112, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded .expand-trigger {
+    background: url(../images/menu.png) no-repeat center -175px;
+    border-left: 1px solid #dceeff;
+    display: block;
+    font-size: 18px;
+    height: 3em;
+    line-height: 3em;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-indent: -9999em;
+    top: 0;
+    width: 62px;
+  }
+  /* line 126, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded .expand-trigger:hover {
+    background-color: #8ac8ff;
+    background-position: center -225px;
+  }
+  /* line 132, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded.closed > .menu {
+    position: absolute;
+    left: -9999em;
+  }
+  /* line 135, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded.closed .expand-trigger {
+    background-position: center -75px;
+  }
+  /* line 137, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul > li.expanded.closed .expand-trigger:hover {
+    background-position: center -125px;
+  }
+}
 @media (min-width: 960px) {
-  /* line 55, ../sass/features/_design.scss */
+  /* line 73, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
   nav.menu-name-main-menu > ul {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 0;
   }
-  /* line 28, ../sass/base/_mixins-extendables.scss */
+  /* line 43, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul li {
     list-style: none;
     margin: 0;
   }
-  /* line 67, ../sass/base/_mixins-extendables.scss */
+  /* line 94, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul li {
     display: inline-block;
     font-size: 16px;
@@ -881,57 +1048,62 @@ nav.menu-name-main-menu > ul .nolink {
     margin: 0;
     padding: 0;
   }
-  /* line 78, ../sass/base/_mixins-extendables.scss */
+  /* line 105, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li > a {
     display: inline-block;
     text-align: center;
     text-decoration: none;
   }
-  /* line 81, ../sass/base/_mixins-extendables.scss */
+  /* line 108, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li.expanded {
     position: relative;
   }
-  /* line 83, ../sass/base/_mixins-extendables.scss */
+  /* line 110, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li.expanded ul.menu {
     position: absolute;
     left: -9999em;
     background: #bde0ff;
+    margin: 0;
     padding: 0 10px;
   }
-  /* line 87, ../sass/base/_mixins-extendables.scss */
+  /* line 115, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li.expanded ul.menu li {
     display: block;
   }
-  /* line 92, ../sass/base/_mixins-extendables.scss */
+  /* line 120, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li.expanded:hover ul.menu {
     left: 0;
     z-index: 99;
   }
-  /* line 96, ../sass/base/_mixins-extendables.scss */
+  /* line 124, /Users/joachimverbeke/Sites/themerocket/sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li.expanded:hover a {
     white-space: nowrap;
   }
-  /* line 78, ../sass/features/_design.scss */
+  /* line 148, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
   nav.menu-name-main-menu > ul > li > a {
     border-top: none;
     margin: 0;
     padding: 0 1em;
   }
-  /* line 82, ../sass/features/_design.scss */
+  /* line 152, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
   nav.menu-name-main-menu > ul > li > a.active-trail {
     background: #8ac8ff;
     color: white;
     font-weight: 700;
   }
+  /* line 159, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
+  nav.menu-name-main-menu > ul .expand-trigger {
+    display: none;
+  }
 }
 
-/* line 93, ../sass/features/_design.scss */
+/* line 166, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 #footer > .section {
   background: #bde0ff;
   padding: 20px 10px;
 }
 
-/* line 101, ../sass/features/_design.scss */
+/* line 174, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 .view-content > .item-list > ul {
   padding: 0;
 }
@@ -939,29 +1111,29 @@ nav.menu-name-main-menu > ul .nolink {
 /**
  * pager
  */
-/* line 110, ../sass/features/_design.scss */
+/* line 183, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 .item-list .pager {
   list-style: none;
   margin: 20px 0;
   padding: 0 0 20px 0;
   text-align: center;
 }
-/* line 115, ../sass/features/_design.scss */
+/* line 188, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 .item-list .pager li {
   display: inline-block;
   margin: 0 0.25em;
   padding: 0;
 }
-/* line 119, ../sass/features/_design.scss */
+/* line 192, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 .item-list .pager li.pager-current {
   padding: 2px;
 }
-/* line 123, ../sass/features/_design.scss */
+/* line 196, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 .item-list .pager a {
   padding: 2px;
   text-decoration: none;
 }
-/* line 131, ../sass/features/_design.scss */
+/* line 204, /Users/joachimverbeke/Sites/themerocket/sass/features/_design.scss */
 .item-list .pager .pager-first a,
 .item-list .pager .pager-previous a,
 .item-list .pager .pager-next a,
@@ -973,193 +1145,37 @@ nav.menu-name-main-menu > ul .nolink {
 }
 
 /**
- * Main menu
- */
-/* line 167, ../sass/features/_design.scss */
-.primary_navigation {
-  /*h2 {
-    //background: $main-menu-bg url(../images/hamburger-menu.png) no-repeat right center;
-    color: white;
-    cursor: pointer;
-    display: block;
-    font-weight: 400;
-    height: 53px;
-    line-height: 53px;
-    margin-bottom: 0;
-    padding: 0 20px;
-  }*/
-  /*.block-menu-block {
-    &.open {
-      h2 {
-        //background-color: $main-menu-active-bg;
-      }
-      > ul.menu {
-        display: block;
-        margin: 0 1px;
-      }
-    }
-    > ul.menu {
-      @include menu;
-      display: none;
-      a {
-        //color: $main-menu-color;
-        display: block;
-        padding: 0 20px;
-        text-decoration: none;
-        white-space: nowrap;
-      }
-      li {
-        margin: 1px 0 0;
-        padding: 0;
-      }
-      > li {
-        > a {
-          //background: $main-menu-bg;
-          display: block;
-          font-size: 21px;
-          font-weight: 300;
-          height: 53px;
-          line-height: 53px;
-          text-decoration: none;
-          @include transition(background-color 0.5s ease, color 0.5s ease);
-          &:hover {
-            //background-color: $main-menu-hover-bg;
-          }
-        }
-        ul.menu {
-          //background: $main-menu-bg;
-          font-size: 16px;
-          li {
-            //background: $main-menu-bg;
-            margin: 0;
-          }
-          a {
-            border-top: 1px solid #80a6ae;
-            height: 42px;
-            line-height: 42px;
-            padding: 0 30px;
-            &:hover {
-              //background: $main-menu-sub-hover-bg;
-            }
-          }
-        }
-      }
-    }
-  }*/
-}
-
-/*@media (min-width: $breakpoint_desktop) {
-  .primary_navigation {
-    h2 {
-      display: none;
-    }
-    .block-menu-block {
-      > ul.menu {
-        @include horizontal-menu;
-        display: block;
-        margin: 0;
-        position: relative;
-        z-index: 999;
-        > li {
-          float: left;
-          position: relative;
-          > a {
-            text-align: center;
-          }
-          &.active {
-            > a {
-              margin: -12px -1px 0;
-              margin-top: -12px;
-              padding: 12px 40px 0 39px;
-              position: relative;
-              z-index: 2;
-              &:before,
-              &:after {
-                content: " ";
-                display: block;
-                position: absolute;
-                top: 0;
-              }
-              &:before {
-                height: 65px;
-                left: -3px;
-                width: 3px;
-                z-index: 5;
-              }
-              &:after {
-                height: 65px;
-                right: -3px;
-                width: 3px;
-                z-index: 5;
-              }
-            }
-          }
-          ul.menu {
-            background: transparent;
-            left: -9999em;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            @include transition(opacity 0.2s ease);
-            li {
-              display: block;
-              float: none;
-              margin: 0;
-              position: relative;
-              z-index: 99;
-              a {
-                border-top: none;
-                padding: 0 14px;
-                text-align: left;
-              }
-              &.first {
-                padding-top: 10px;
-              }
-            }
-          }
-          &:hover {
-            ul.menu {
-              left: 0;
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-}*/
-/**
  * searchpage
  */
-/* line 6, ../sass/features/_search.scss */
+/* line 6, /Users/joachimverbeke/Sites/themerocket/sass/features/_search.scss */
 .page-search .region-content .search-form {
   background: #dfe5e8;
   margin-bottom: 30px;
   padding: 20px;
 }
-/* line 10, ../sass/features/_search.scss */
+/* line 10, /Users/joachimverbeke/Sites/themerocket/sass/features/_search.scss */
 .page-search .region-content .search-form label {
   display: block;
   margin-bottom: 0.5em;
 }
-/* line 14, ../sass/features/_search.scss */
+/* line 14, /Users/joachimverbeke/Sites/themerocket/sass/features/_search.scss */
 .page-search .region-content .search-form input[type="text"] {
   margin-bottom: 0.5em;
 }
-/* line 18, ../sass/features/_search.scss */
+/* line 18, /Users/joachimverbeke/Sites/themerocket/sass/features/_search.scss */
 .page-search .region-content .view-mode-search_result {
   margin: 20px 0;
 }
 
-/* line 24, ../sass/features/_search.scss */
+/* line 24, /Users/joachimverbeke/Sites/themerocket/sass/features/_search.scss */
 ol.search-results {
   padding: 0;
 }
-/* line 26, ../sass/features/_search.scss */
+/* line 26, /Users/joachimverbeke/Sites/themerocket/sass/features/_search.scss */
 ol.search-results li {
   margin-bottom: 1.25em;
 }
-/* line 28, ../sass/features/_search.scss */
+/* line 28, /Users/joachimverbeke/Sites/themerocket/sass/features/_search.scss */
 ol.search-results li h3 {
   margin-bottom: 0.75em;
 }

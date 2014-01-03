@@ -1,4 +1,9 @@
 <?php
+/**
+ * @file
+ * Contains theme override functions and preprocess functions for the Themerocket theme.
+ */
+
 function themerocket_css_alter(&$css) {
 
   /* Remove some default Drupal css */
@@ -61,11 +66,6 @@ function themerocket_links__locale_block($variables) {
   $content = theme_links($variables);
   return $content;
 }
-
-/**
- * @file
- * Contains theme override functions and preprocess functions for the Themerocket theme.
- */
 
 /**
  * Changes the default meta content-type tag to the shorter HTML5 version
@@ -165,21 +165,10 @@ function themerocket_preprocess_panels_pane(&$variables) {
  * implements hook_form_alter
  */
 function themerocket_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id === 'mailchimp_lists_user_subscribe_form_idylls_newsletter') {
-
-    $form_mergevars = &$form['mailchimp_lists']['mailchimp_idylls_newsletter']['mergevars'];
-    if (isset($form_mergevars['EMAIL'])) {
-      $form_mergevars['EMAIL']['#placeholder'] = $form_mergevars['EMAIL']['#title'];
-      $form_mergevars['EMAIL']['#weight'] = 99;
-    }
-    if (isset($form_mergevars['FNAME'])) {
-      $form_mergevars['FNAME']['#prefix'] = '<div class="name_wrap">';
-      $form_mergevars['FNAME']['#placeholder'] = $form_mergevars['FNAME']['#title'];
-    }
-    if (isset($form_mergevars['LNAME'])) {
-      $form_mergevars['LNAME']['#suffix'] = '</div>';
-      $form_mergevars['LNAME']['#placeholder'] = $form_mergevars['LNAME']['#title'];
-    }
+// Add some cool text to the search block form
+  if ($form_id == 'search_block_form') {
+    // HTML5 placeholder attribute
+    $form['search_block_form']['#attributes']['placeholder'] = t('enter search terms');
   }
 }
 
@@ -423,4 +412,22 @@ function themerocket_panels_default_style_render_region($vars) {
  */
 function themerocket_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#attributes']['placeholder'] = t('Search…');
+}
+
+/**
+ * Implements theme_menu_link()
+ *
+ * adding a 'trigger' to links with submenu, for use in mobile menus
+ */
+function themerocket_menu_link($variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  $sub_menu_trigger = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+    $sub_menu_trigger = '<a href="#" class="expand-trigger">' . t('expand submenu') . '</a>';
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu_trigger . $sub_menu . "</li>\n";
 }

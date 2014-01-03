@@ -69,6 +69,7 @@ h1 {
   @include adjust-font-size-to($h1-font-size);
   font-weight: 700;
   line-height: 1.4;
+  margin: 0 0 1em;
 }
 
 h2 {
@@ -76,6 +77,7 @@ h2 {
   @include adjust-font-size-to($h2-font-size);
   font-weight: 700;
   line-height: 25px;
+  margin: 0 0 1em;
 
   &.pane-title {
     line-height: 1;
@@ -85,11 +87,13 @@ h2 {
 h3 {
   @include adjust-font-size-to($h3-font-size);
   font-weight: 700;
+  margin: 0 0 1em;
 }
 
 h4 {
   @include adjust-font-size-to($h4-font-size);
   font-weight: 700;
+  margin: 0 0 1em;
 }
 
 h5 {
@@ -175,7 +179,8 @@ input[type="search"] {
   }
 }
 select {
-  background: url(../images/select-arrow.png) no-repeat right center;
+  background: white url(../images/select-arrow.png) no-repeat right center;
+  font-size: 16px;
   height: 33px;
   padding: 6px 32px 4px 10px;
   position: relative;
@@ -185,13 +190,18 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background: $silver-grey;
-  border: 1px solid $silver-grey;
+  background: $form-button-bg;
+  border: 1px solid $form-button-bg;
   border-radius: 2px;
   cursor: pointer;
   height: 32px;
   line-height: 26px;
   margin: 0;
+  + input[type="button"],
+  + input[type="reset"],
+  + input[type="submit"] {
+    margin-left: 1em;
+  }
 }
 input[type="submit"] {
   background: $form-submit-bg;
@@ -206,6 +216,22 @@ input[type="submit"] {
   &:active {
     background: $form-submit-bg-active;
     border-color: $form-submit-bg-active;
+  }
+
+  &.field-add-more-submit,
+  &#edit-preview {
+    background: $form-button-bg;
+    border: 1px solid $form-button-bg;
+    margin-top: 1em;
+    &:hover,
+    &:focus{
+      background: $form-button-bg-hover;
+      border-color: $form-button-bg-hover;
+    }
+    &:active {
+      background: $form-button-bg-active;
+      border-color: $form-button-bg-active;
+    }
   }
 }
 // Re-set default cursor for disabled elements
@@ -262,6 +288,30 @@ form .description {
     display: inline;
     font-size: 1em;
     font-weight: 400;
+  }
+}
+
+.container-inline-date {
+  > .form-item {
+    margin: 0;
+    label,
+    .date-clear {
+      display: inline;
+    }
+    .date-padding {
+      padding: 0;
+    }
+  }
+}
+
+fieldset {
+  margin-bottom: 1em;
+  legend {
+    font-weight: 700;
+  }
+  .fieldset-wrapper {
+    background: #eee;
+    padding: 10px;
   }
 }
 

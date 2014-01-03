@@ -6,10 +6,17 @@
   &:before,
   &:after {
     display: table;
-    content: "";
+    content: " ";
   }
   &:after {
     clear: both;
+  }
+
+  li > & {
+    &:before,
+    &:after {
+      display: none;
+    }
   }
 }
 
@@ -17,6 +24,14 @@
 @mixin hidden {
   position: absolute;
   left: -9999em;
+}
+
+.hidden {
+  @include hidden;
+}
+@mixin show-hidden {
+  position: static !important;
+  left: auto !important;
 }
 
 // Menu
@@ -53,7 +68,19 @@
   > li {
     &.expanded {
       ul.menu {
-        @include hidden;
+        margin: 0 10px;
+        padding-left: 0;
+      }
+      &.closed,
+      &.open {
+        ul.menu {
+          //transition: height 2s ease;
+        }
+      }
+      &.open {
+        ul.menu {
+          //height: auto;
+        }
       }
     }
   }
@@ -83,6 +110,7 @@
       ul.menu {
         @include hidden;
         background: $bg;
+        margin: 0;
         padding: 0 10px;
         li {
           display: block;
@@ -100,4 +128,3 @@
     }
   }
 }
-
