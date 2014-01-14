@@ -39,6 +39,11 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
+  <?php if(theme_get_setting('themerocket_respondjs')): ?>
+  <!--[if lt IE 9]>
+    <script src="<?php print base_path() . path_to_theme(); ?>/js/respond.min.js"></script>
+  <![endif]-->
+  <?php endif; ?>
   <?php print $scripts; ?>
   <?php if (!empty($html5shim)) { print $html5shim; } ?>
 </head>

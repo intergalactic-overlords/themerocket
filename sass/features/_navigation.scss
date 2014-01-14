@@ -1,0 +1,162 @@
+#navigation {
+  > .section {
+    position: relative;
+    @media (max-width: $breakpoint_desktop - 1) {
+      overflow: hidden;
+    }
+  }
+  .block-menu-block {
+    > h2 {
+      background: url(../images/menu.png) no-repeat right -25px;
+      cursor: pointer;
+      height: 3em;
+      line-height: 3em;
+      margin: 0 -10px;
+      padding: 0 10px;
+      &:hover {
+        background-color: $main-menu-hover-bg;
+        background-position: right 25px;
+        color: $main-menu-hover-text;
+      }
+      @media (min-width: $breakpoint_desktop) {
+        @include hidden;
+      }
+    }
+    > .content {
+      @media (max-width: $breakpoint_desktop - 1) {
+        margin: 0 -10px;
+        //@include single-transition(height, 0.3s, false, ease);
+      }
+    }
+    &.closed {
+      > .content {
+        @media (max-width: $breakpoint_desktop - 1) {
+          @include hidden;
+        }
+      }
+    }
+  }
+}
+
+nav.menu-name-main-menu > ul {
+  @include vertical-menu;
+  a,
+  .nolink {
+    border-top: 1px solid adjust-lightness($main-menu-active-text, 6%);
+    font-size: 18px;
+    font-weight: 700;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 10px;
+    @include single-transition(background-color, 0.3s, false, ease);
+    &:hover,
+    &:focus {
+      background: $main-menu-hover-bg;
+      color: $main-menu-hover-text;
+    }
+  }
+  .nolink {
+    cursor: default;
+  }
+  .expand-trigger {
+    display: none;
+  }
+  @media (max-width: $breakpoint_desktop - 1) {
+    > li {
+      &.expanded {
+        position: relative;
+      }
+      > a,
+      .nolink {
+        padding-right: 50px;
+      }
+      > .menu {
+        //@include single-transition(height, 0.3s, false, ease);
+        overflow: hidden;
+        a {
+          font-size: 16px;
+          height: 2.4em;
+          line-height: 2.4em;
+          padding: 0 20px;
+        }
+      }
+      .expand-trigger {
+        background: url(../images/menu.png) no-repeat center -175px;
+        border-left: 1px solid adjust-lightness($main-menu-active-text, 6%);
+        display: block;
+        font-size: 18px;
+        height: 3em;
+        line-height: 3em;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-indent: -9999em;
+        top: 0;
+        width: 62px;
+        &:hover,
+        &:focus {
+          background-color: $main-menu-hover-bg;
+          background-position: center -225px;
+          color: $main-menu-hover-text;
+        }
+      }
+      &.closed {
+        > .menu {
+          @include hidden;
+        }
+        .expand-trigger {
+          background-position: center -75px;
+          &:hover {
+            background-position: center -125px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: $breakpoint-desktop) {
+    @include horizontal-menu;
+    > li {
+      > a,
+      .nolink {
+        border-top: none;
+        margin: 0;
+        padding: 0 1em;
+        &.active-trail {
+          color: $main-menu-active-text;
+          font-weight: 700;
+          &:hover,
+          &:active,
+          &:focus {
+            color: $main-menu-hover-text;
+          }
+        }
+      }
+    }
+    .expand-trigger {
+      display: none;
+    }
+  }
+}
+
+/**
+ * language switcher
+ */
+.block-locale {
+  position: absolute;
+  right: 15px;
+  text-transform: uppercase;
+  top: 0;
+  li {
+    display: inline;
+    a {
+      @include button-link;
+      color: $text-color;
+      text-decoration: underline;
+      &.active {
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+}

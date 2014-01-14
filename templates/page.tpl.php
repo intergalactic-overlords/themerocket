@@ -74,9 +74,9 @@
         <div id="name-and-slogan">
           <?php if ($site_name): ?>
             <?php if ($title): ?>
-              <div id="site-name"><strong>
+              <div id="site-name">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </strong></div>
+              </div>
             <?php else: /* Use h1 when the content title is empty */ ?>
               <h1 id="site-name">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
@@ -102,7 +102,7 @@
       <?php print render($page['navigation']); ?>
     </div></div> <!-- /.section, /#navigation -->
 
-    <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu) { print ' with-navigation'; } ?>">
+    <div id="main-wrapper"><div id="main" class="clearfix">
 
       <div id="content" class="column" role="main"><div class="section">
         <?php /*if ($breadcrumb): ?>
@@ -115,7 +115,7 @@
         <?php endif; ?>
         <?php print render($title_suffix); ?>
         <?php if ($tabs): ?>
-          <div class="tabs"><?php print render($tabs); ?></div>
+          <nav class="tabs"><?php print render($tabs); ?></nav>
         <?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?>
@@ -125,11 +125,11 @@
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 
-      <footer id="footer" role="contentinfo"><div class="section">
-        <?php print render($page['footer']); ?>
-      </div></footer> <!-- /.section, /#footer -->
-
     </div></div> <!-- /#main, /#main-wrapper -->
+
+    <footer id="footer" role="contentinfo"><div class="section">
+      <?php print render($page['footer']); ?>
+    </div></footer> <!-- /.section, /#footer -->
 
   </div> <!-- /#page -->
 

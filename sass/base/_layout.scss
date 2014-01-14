@@ -16,7 +16,12 @@ body {
 #main-wrapper {
 }
 #navigation {
-  margin: 40px 0;
+  margin: 0;
+  .section {
+    @include breakpoint($breakpoint-desktop) {
+      padding: 0;
+    }
+  }
 }
 #footer {
   margin-top: 40px;
@@ -43,7 +48,6 @@ body {
 }
 
 #main {
-  //@include span-columns(12 omega, 12);
   .block-system {
     padding: 0;
   }
@@ -69,10 +73,11 @@ body {
 
 
 @include breakpoint($breakpoint-desktop) {
-  #page {
+  .section {
     margin: 0 auto;
     max-width: $breakpoint-desktop;
   }
+  /*
   #footer {
     clear: both;
     margin-top: 20px;
@@ -85,31 +90,5 @@ body {
       max-width: $breakpoint-desktop;
       //padding: 0 30px;
     }
-  }
-}
-
-/**
- *
- */
-.panel-2col,
-.panel-2col-stacked {
-  .panel-col-first {
-    float: left;
-    width: 81.25%;
-  }
-  .panel-col-last {
-    float: right;
-    width: 12.5%;
-  }
-}
-
-.panel-separator {
-  display: none;
-}
-
-/**
- * Views
- */
-.views-row {
-  margin-bottom: 20px;
+  }*/
 }

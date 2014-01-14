@@ -1,0 +1,30 @@
+/**
+ * IPE
+ */
+.panels-ipe-editing .panels-ipe-region {
+  padding: 10px;
+  border: 2px dashed #999;
+}
+
+div.panels-ipe-placeholder {
+  border: none;
+}
+
+/**
+ *
+ */
+.panel-2col,
+.panel-2col-stacked {
+  .panel-col-first {
+    float: left;
+    width: 81.25%;
+  }
+  .panel-col-last {
+    float: right;
+    width: 12.5%;
+  }
+}
+
+.panel-separator {
+  display: none;
+}

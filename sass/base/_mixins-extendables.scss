@@ -12,12 +12,12 @@
     clear: both;
   }
 
-  li > & {
+  /*li > & {
     &:before,
     &:after {
       display: none;
     }
-  }
+  }*/
 }
 
 // hidden
@@ -60,28 +60,16 @@
   @include menu;
   li {
     display: block;
-    a {
+    a,
+    .nolink {
       display: block;
       text-decoration: none;
     }
   }
   > li {
-    &.expanded {
-      ul.menu {
-        margin: 0 10px;
-        padding-left: 0;
-      }
-      &.closed,
-      &.open {
-        ul.menu {
-          //transition: height 2s ease;
-        }
-      }
-      &.open {
-        ul.menu {
-          //height: auto;
-        }
-      }
+    ul.menu {
+      margin: 0 10px;
+      padding-left: 0;
     }
   }
 }
@@ -102,28 +90,28 @@
     }
   }
   > li {
-    > a {
+    > a,
+    .nolink {
       @include button-link;
     }
     &.expanded {
       position: relative;
-      ul.menu {
-        @include hidden;
-        background: $bg;
-        margin: 0;
-        padding: 0 10px;
-        li {
-          display: block;
-        }
+    }
+    ul.menu {
+      @include hidden;
+      margin: 0;
+      padding: 0 10px;
+      li {
+        display: block;
       }
-      &:hover {
-        ul.menu {
-          left: 0;
-          z-index: 99;
-        }
-        a {
-          white-space: nowrap;
-        }
+    }
+    &:hover {
+      ul.menu {
+        left: 0;
+        z-index: 99;
+      }
+      a {
+        white-space: nowrap;
       }
     }
   }

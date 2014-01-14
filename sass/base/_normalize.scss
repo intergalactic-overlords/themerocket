@@ -2,24 +2,25 @@
  * admin tabs
  */
 .pane-page-tabs,
-div.tabs {
-  //margin: 1em 0;
+nav.tabs {
   .tabs {
     @include horizontal-menu;
-    margin: 15px 0;
+    margin: 12px 0;
     li {
       a {
         @include button-link;
-        border: 1px solid $silver-grey;
-        border-radius: 2px;
+        background: $admin-tab-bg;
+        font-weight: 700;
         height: 30px;
-        line-height: 26px;
+        line-height: 30px;
         margin-right: 1em;
         padding: 0 12px;
-        &.active,
+        @include single-transition(background-color, 0.3s, false, ease);
+        &.active {
+          background: $admin-tab-active-bg;
+        }
         &:hover {
-          background: $silver-grey;
-          @include single-transition(background-color, 0.3s, false, ease);
+          background: $admin-tab-hover-bg;
         }
       }
     }
@@ -49,18 +50,6 @@ div.tabs {
 }
 
 /**
- * IPE
- */
-.panels-ipe-editing .panels-ipe-region {
-  padding: 10px;
-  border: 2px dashed #999;
-}
-
-div.panels-ipe-placeholder {
-  border: none;
-}
-
-/**
  * draggable
  */
 .tabledrag-toggle-weight-wrapper {
@@ -77,4 +66,18 @@ a.tabledrag-handle .handle {
   background-position: 6px 10px;
   height: 25px;
   width: 25px;
+}
+
+/**
+ * workbench block
+ */
+.block-workbench {
+  margin: 20px 0;
+  .workbench-info-block {
+    padding: 10px;
+  }
+  #edit-state {
+    margin-right: 10px;
+    max-width: 300px;
+  }
 }

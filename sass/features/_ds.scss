@@ -1,0 +1,19 @@
+/**
+ * ds layouts
+ */
+.ds-2col-stacked-fluid,
+.ds-2col-fluid {
+  .group-header {
+
+  }
+  .group-left {
+    float: left;
+    padding-right: 20px;
+    width: 25%;
+  }
+  .group-right {
+    float: none;
+    overflow: hidden;
+    width: auto;
+  }
+}

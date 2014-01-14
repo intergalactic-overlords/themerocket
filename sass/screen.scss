@@ -30,5 +30,10 @@ $breakpoint-ie-output: false;
 @import 'base/layout';
 @import 'base/typography';
 
+@import 'features/navigation';
+@import 'features/panels';
+@import 'features/views';
+@import 'features/ds';
+
 @import 'features/design';
 @import 'features/search';

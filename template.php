@@ -99,7 +99,9 @@ function themerocket_preprocess_block(&$variables) {
  */
 function themerocket_preprocess_html(&$vars) {
 
-  drupal_add_css('http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic');
+  // fonts
+  drupal_add_css('http://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,900,400italic,700italic');
+
 
   // Ensure that the $vars['rdf'] variable is an object.
   if (!isset($vars['rdf']) || !is_object($vars['rdf'])) {
@@ -397,7 +399,7 @@ function themerocket_preprocess_views_view_table(&$vars) {
 /**
   * Implements theme_panels_default_style_render_region()
   *
-  * Remove panels seperator
+  * Remove panels separator
   */
 function themerocket_panels_default_style_render_region($vars) {
   $output = '';
@@ -414,18 +416,41 @@ function themerocket_form_search_block_form_alter(&$form, &$form_state, $form_id
   $form['search_block_form']['#attributes']['placeholder'] = t('Search…');
 }
 
+
 /**
- * Implements theme_menu_link()
+ * Implements theme_menu_tree__menu_block().
  *
+ * add level classes to menus in menu_block
+ */
+function themerocket_menu_tree__menu_block(&$variables) {
+  return '<ul class="menu lvl-1">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements theme_menu_link().
+ *
+ * add level classes to menus
  * adding a 'trigger' to links with submenu, for use in mobile menus
  */
 function themerocket_menu_link($variables) {
+
   $element = $variables['element'];
+  if (!isset($element['lvl'])) {
+    $element['lvl'] = 2;
+  }
+  $lvl = $element['lvl'];
   $sub_menu = '';
   $sub_menu_trigger = '';
 
   if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
+    // Wrap in dropdown-menu.
+    unset($element['#below']['#theme_wrappers']);
+    foreach($element['#below'] as $key => $value) {
+      if (isset($value['#href'])) {
+        $element['#below'][$key]['lvl'] = $lvl + 1;
+      }
+    }
+    $sub_menu = '<ul class="menu lvl-' . $lvl . '">' . drupal_render($element['#below']) . '</ul>';
     $sub_menu_trigger = '<a href="#" class="expand-trigger">' . t('expand submenu') . '</a>';
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);

@@ -1,26 +1,53 @@
-$blood-red: #b83020;
-$grey: #222;
-$silver-grey: #dfe5e8;
+$silver-grey: #d2d5d8;
 $cloud-grey: adjust-lightness($silver-grey, -20%);
+$nineties-orange: #ff7704;
+$night-blue: #222a30;
+$grandma-grey: #eeeeef;
 
 $somekindof-yellow: #fde07f;
 
-$bg: adjust-lightness(aliceblue, -10%);
+$alice-more-blue: adjust-lightness(aliceblue, -10%);
 
-$text-color: $grey;
-$form-color: $grey;
 
-$link-color: $grey;
-$link-hover-color: $grey;
 
-$form-submit-bg: $blood-red;
-$form-submit-bg-hover: adjust-lightness($blood-red, -7%);
-$form-submit-bg-active: adjust-lightness($blood-red, -14%);
+// general
+$text-color: $night-blue;
+$form-color: $night-blue;
+
+$site-bg: white;
+$header-bg: $night-blue;
+$content-bg: $grandma-grey;
+
+// links
+$link-color: $night-blue;
+$link-hover-color: $night-blue;
+
+// forms
+$form-submit-bg: $nineties-orange;
+$form-submit-bg-hover: adjust-lightness($nineties-orange, -7%);
+$form-submit-bg-active: adjust-lightness($nineties-orange, -14%);
 
 $form-button-bg: $cloud-grey;
 $form-button-bg-hover: adjust-lightness($cloud-grey, -7%);
 $form-button-bg-active: adjust-lightness($cloud-grey, -14%);
 
+// messages
 $message-green: #c2f75f;
 $message-yellow: #fff05d;
 $message-red: #f7765f;
+
+// quote
+$quote-color: $nineties-orange;
+
+// table
+$table-bg: $nineties-orange;
+
+// menu
+$main-menu-hover-bg: $nineties-orange;
+$main-menu-hover-text: white;
+$main-menu-active-text: $nineties-orange;
+
+// admin tabs
+$admin-tab-bg: white;
+$admin-tab-active-bg: $silver-grey;
+$admin-tab-hover-bg:  $alice-more-blue;
