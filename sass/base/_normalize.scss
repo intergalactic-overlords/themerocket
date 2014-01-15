@@ -1,53 +1,91 @@
 /**
+ * navtray
+ */
+#navbar-tray .expand-trigger {
+  display: none;
+}
+
+/**
  * admin tabs
  */
 .pane-page-tabs,
 nav.tabs {
+  margin: 12px 0;
   .tabs {
     @include horizontal-menu;
-    margin: 12px 0;
-    li {
-      a {
-        @include button-link;
-        background: $admin-tab-bg;
-        font-weight: 700;
-        height: 30px;
-        line-height: 30px;
-        margin-right: 1em;
-        padding: 0 12px;
-        @include single-transition(background-color, 0.3s, false, ease);
-        &.active {
-          background: $admin-tab-active-bg;
-        }
-        &:hover {
-          background: $admin-tab-hover-bg;
-        }
+    margin: 0;
+    a {
+      height: 30px;
+      line-height: 30px;
+      margin-right: 1em;
+      padding: 0 12px;
+    }
+  }
+  .primary {
+    a {
+      background: $admin-tab-bg;
+      font-weight: 700;
+      @include single-transition(background-color, 0.3s, false, ease);
+      &.active {
+        background: $admin-tab-active-bg;
+      }
+      &:hover {
+        background: $admin-tab-hover-bg;
+      }
+    }
+  }
+  .secondary {
+    background: $silver-grey;
+    a {
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
 }
 
 /**
+ * breadcrumb
+ */
+.breadcrumb {
+  margin: 1em 0;
+}
+
+/**
  * messages
  */
-.drupal-messages {
-  > .messages {
-    border-radius: 2px;
-    font-weight: bold;
-    padding: 10px 20px 10px 60px;
-    margin: 1em 0;
-    background: $message-green url('../img/messages.png') 10px 50% no-repeat;
+.messages {
+  background: $message-green url('../images/messages.svg#status') 10px 12px no-repeat;
+  background-size: 32px;
+  padding: 10px 20px 10px 60px;
+  margin: 1em 0;
+  min-height: 56px;
+  .message {
+    em {
+      font-weight: bold;
+    }
+    ~ .message {
+      border-top: 2px dotted rgba(255, 255, 255, 0.6);
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+    }
   }
-  > .error {
+  &.error {
     background-color: $message-red;
+    background-image: url('../images/messages.svg#error');
+    .message {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
   }
-  > .warning {
+  &.warning {
     background-color: $message-yellow;
-  }
-  > .status {
-    background-color: $message-green;
+    background-image: url('../images/messages.svg#warning');
+    .message {
+      border-color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
+
 
 /**
  * draggable
@@ -58,14 +96,22 @@ nav.tabs {
 }
 table.tabledrag-processed {
   table-layout: auto;
+  td {
+    vertical-align: middle;
+  }
 }
 td.field-multiple-drag {
   width: 50px;
 }
-a.tabledrag-handle .handle {
-  background-position: 6px 10px;
-  height: 25px;
-  width: 25px;
+a.tabledrag-handle {
+  .handle {
+    background-position: 6px 14px;
+    height: 28px;
+    width: 25px;
+  }
+  + .form-type-textfield {
+    float: left;
+  }
 }
 
 /**

@@ -13,7 +13,7 @@ $base-font-family: 'Alegreya Sans', sans-serif;
 
 // The font sizes for h1-h6.
 $h1-font-size: 3      * $base-font-size !default;
-$h2-font-size: 1.75  * $base-font-size !default;
+$h2-font-size: 1.75   * $base-font-size !default;
 $h3-font-size: 1.25   * $base-font-size !default;
 $h4-font-size: 1      * $base-font-size !default;
 $h5-font-size: 0.83   * $base-font-size !default;
@@ -109,6 +109,9 @@ h6 {
 b, strong {
   font-weight: 700 !important;
 }
+i, em {
+  font-style: italic !important;
+}
 
 ol, ul {
   list-style: none;
@@ -191,6 +194,7 @@ input[type="submit"] {
   height: 32px;
   line-height: 26px;
   margin: 0;
+  padding: 0 10px;
   + input[type="button"],
   + input[type="reset"],
   + input[type="submit"] {
@@ -245,6 +249,7 @@ textarea {
   padding: 6px 10px;
 }
 form .description {
+  @include clearfix;
   font-size: 0.8em;
 }
 .webform-component-checkbox {
@@ -255,14 +260,17 @@ form .description {
   }
 }
 .form-item {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  td > & {
+    margin-bottom: 0;
+  }
   > label {
     display: block;
     font-weight: 700;
     margin-bottom: 4px;
   }
   .description {
-    font-size: 0.75em;
+    font-size: 0.8em;
     margin-top: 4px;
   }
 }
@@ -299,13 +307,21 @@ form .description {
 }
 
 fieldset {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   legend {
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.3333em;
     font-weight: 700;
+    padding: 5px 10px;
   }
   .fieldset-wrapper {
-    background: #eee;
+    background: rgba(255, 255, 255, 0.5);
     padding: 10px;
+  }
+  &.collapsed {
+    html.js & {
+      min-height: 37px;
+    }
   }
 }
 

@@ -104,10 +104,10 @@
 
     <div id="main-wrapper"><div id="main" class="clearfix">
 
-      <div id="content" class="column" role="main"><div class="section">
-        <?php /*if ($breadcrumb): ?>
-          <?php <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-        <?php endif; */?>
+      <div id="content" class="column" role="main"><div class="section clearfix">
+        <?php if ($breadcrumb): ?>
+          <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+        <?php endif; ?>
         <?php print $messages; ?>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>

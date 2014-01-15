@@ -11,13 +11,6 @@
   &:after {
     clear: both;
   }
-
-  /*li > & {
-    &:before,
-    &:after {
-      display: none;
-    }
-  }*/
 }
 
 // hidden
@@ -66,11 +59,9 @@
       text-decoration: none;
     }
   }
-  > li {
-    ul.menu {
-      margin: 0 10px;
-      padding-left: 0;
-    }
+  .lvl-2 {
+    margin: 0 10px;
+    padding-left: 0;
   }
 }
 
@@ -97,14 +88,6 @@
     &.expanded {
       position: relative;
     }
-    ul.menu {
-      @include hidden;
-      margin: 0;
-      padding: 0 10px;
-      li {
-        display: block;
-      }
-    }
     &:hover {
       ul.menu {
         left: 0;
@@ -113,6 +96,13 @@
       a {
         white-space: nowrap;
       }
+    }
+  }
+  .lvl-2 {
+    @include hidden;
+    margin: 0;
+    li {
+      display: block;
     }
   }
 }

@@ -30,6 +30,7 @@ function themerocket_css_alter(&$css) {
     'modules/system/maintenance.css' => FALSE,
     'modules/system/system.css' => FALSE,
     'modules/system/system.admin.css' => FALSE,
+    //'modules/system/system.base.css' => FALSE,
     'modules/system/system.maintenance.css' => FALSE,
     'modules/system/system.messages.css' => FALSE,
     'modules/system/system.theme.css' => FALSE,
@@ -455,4 +456,38 @@ function themerocket_menu_link($variables) {
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu_trigger . $sub_menu . "</li>\n";
+}
+
+/**
+ * Implements theme_status_messages.
+ *
+ * add class to ul
+ */
+function themerocket_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $output .= "<div class=\"messages $type\">\n";
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+    }
+    if (count($messages) > 1) {
+      $output .= " <ul class='message-list'>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li class="message wysiwyg">' . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= '<div class="message wysiwyg">' . $messages[0] . '</div>';
+    }
+    $output .= "</div>\n";
+  }
+  return $output;
 }

@@ -1,3 +1,4 @@
+// Main navigation
 #navigation {
   > .section {
     position: relative;
@@ -7,10 +8,10 @@
   }
   .block-menu-block {
     > h2 {
-      background: url(../images/menu.png) no-repeat right -25px;
+      background: url(../images/menu.png) no-repeat right -23px;
       cursor: pointer;
-      height: 3em;
-      line-height: 3em;
+      height: 2.4em;
+      line-height: 2.4em;
       margin: 0 -10px;
       padding: 0 10px;
       &:hover {
@@ -25,7 +26,6 @@
     > .content {
       @media (max-width: $breakpoint_desktop - 1) {
         margin: 0 -10px;
-        //@include single-transition(height, 0.3s, false, ease);
       }
     }
     &.closed {
@@ -42,7 +42,7 @@ nav.menu-name-main-menu > ul {
   @include vertical-menu;
   a,
   .nolink {
-    border-top: 1px solid adjust-lightness($main-menu-active-text, 6%);
+    border-top: 1px solid $main-menu-active-text;
     font-size: 18px;
     font-weight: 700;
     height: 3em;
@@ -60,6 +60,9 @@ nav.menu-name-main-menu > ul {
   }
   .expand-trigger {
     display: none;
+  }
+  .lvl-2 {
+    background: $site-bg;
   }
   @media (max-width: $breakpoint_desktop - 1) {
     > li {
@@ -82,7 +85,7 @@ nav.menu-name-main-menu > ul {
       }
       .expand-trigger {
         background: url(../images/menu.png) no-repeat center -175px;
-        border-left: 1px solid adjust-lightness($main-menu-active-text, 6%);
+        border-left: 1px solid $main-menu-active-text;
         display: block;
         font-size: 18px;
         height: 3em;
@@ -135,6 +138,18 @@ nav.menu-name-main-menu > ul {
     }
     .expand-trigger {
       display: none;
+    }
+    .lvl-2 {
+      li {
+        a {
+          border-color: #eeeeef;
+        }
+      }
+      .first {
+        a {
+          border-top: none;
+        }
+      }
     }
   }
 }
