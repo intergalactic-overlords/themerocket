@@ -59,6 +59,11 @@ function themerocket_css_alter(&$css) {
  */
 function themerocket_links__locale_block($variables) {
   foreach($variables['links'] as $language => $langInfo) {
+    // link empty translation to homepage
+    if (empty($langInfo['href'])) {
+      $langInfo['href'] = "";
+    }
+
     $abbr = $langInfo['language']->language;
     $name = $langInfo['language']->name;
     $variables['links'][$language]['title'] = '<abbr title="' . $name . '">' . $abbr . '</abbr>';
