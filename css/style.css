@@ -3,21 +3,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 36, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/toolkit-1.3.8/stylesheets/toolkit/_box-sizing.scss */
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php');
-}
-
-/* line 4, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/toolkit-1.3.8/stylesheets/toolkit/_fluid-media.scss */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 17, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,46 +25,46 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 116, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -87,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .clearfix, #main .panel-display .panel-panel {
   *zoom: 1;
 }
-/* line 7, ../sass/base/_mixins-extendables.scss */
+/* line 6, ../sass/base/_mixins-extendables.scss */
 .clearfix:before, #main .panel-display .panel-panel:before, .clearfix:after, #main .panel-display .panel-panel:after {
   display: table;
   content: " ";
@@ -97,7 +83,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   clear: both;
 }
 
-/* line 22, ../sass/base/_mixins-extendables.scss */
+/* line 28, ../sass/base/_mixins-extendables.scss */
 .hidden {
   position: absolute;
   left: -9999em;
@@ -114,7 +100,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /**
  * admin tabs
  */
-/* line 12, ../sass/base/_normalize.scss */
+/* line 11, ../sass/base/_normalize.scss */
 .pane-page-tabs,
 nav.tabs {
   margin: 12px 0;
@@ -128,13 +114,13 @@ nav.tabs .tabs {
   font-size: 0;
   margin: 0;
 }
-/* line 36, ../sass/base/_mixins-extendables.scss */
+/* line 42, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs li,
 nav.tabs .tabs li {
   list-style: none;
   margin: 0;
 }
-/* line 73, ../sass/base/_mixins-extendables.scss */
+/* line 79, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs li,
 nav.tabs .tabs li {
   display: inline-block;
@@ -143,7 +129,7 @@ nav.tabs .tabs li {
   margin: 0;
   padding: 0;
 }
-/* line 85, ../sass/base/_mixins-extendables.scss */
+/* line 90, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li > a,
 .pane-page-tabs .tabs > li .nolink,
 nav.tabs .tabs > li > a,
@@ -152,30 +138,30 @@ nav.tabs .tabs > li .nolink {
   text-align: center;
   text-decoration: none;
 }
-/* line 88, ../sass/base/_mixins-extendables.scss */
+/* line 94, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li.expanded,
 nav.tabs .tabs > li.expanded {
   position: relative;
 }
-/* line 92, ../sass/base/_mixins-extendables.scss */
+/* line 98, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li:hover ul.menu,
 nav.tabs .tabs > li:hover ul.menu {
   left: 0;
   z-index: 99;
 }
-/* line 96, ../sass/base/_mixins-extendables.scss */
+/* line 102, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs > li:hover a,
 nav.tabs .tabs > li:hover a {
   white-space: nowrap;
 }
-/* line 101, ../sass/base/_mixins-extendables.scss */
+/* line 107, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs .lvl-2,
 nav.tabs .tabs .lvl-2 {
   position: absolute;
   left: -9999em;
   margin: 0;
 }
-/* line 104, ../sass/base/_mixins-extendables.scss */
+/* line 110, ../sass/base/_mixins-extendables.scss */
 .pane-page-tabs .tabs .lvl-2 li,
 nav.tabs .tabs .lvl-2 li {
   display: block;
@@ -193,9 +179,9 @@ nav.tabs .tabs a {
 nav.tabs .primary a {
   background: white;
   font-weight: 700;
-  -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 /* line 29, ../sass/base/_normalize.scss */
@@ -318,7 +304,7 @@ a.tabledrag-handle + .form-type-textfield {
   max-width: 300px;
 }
 
-/* line 8, ../sass/base/_layout.scss */
+/* line 7, ../sass/base/_layout.scss */
 html,
 body {
   height: 100%;
@@ -440,12 +426,12 @@ html {
 a {
   color: #222a30;
 }
-/* line 44, ../sass/base/_typography.scss */
+/* line 43, ../sass/base/_typography.scss */
 a:hover, a:focus {
   color: #222a30;
 }
 
-/* line 53, ../sass/base/_typography.scss */
+/* line 50, ../sass/base/_typography.scss */
 button,
 input,
 select,
@@ -454,7 +440,7 @@ textarea {
   font-size: inherit;
 }
 
-/* line 61, ../sass/base/_typography.scss */
+/* line 59, ../sass/base/_typography.scss */
 input,
 select,
 textarea {
@@ -555,7 +541,7 @@ table tbody tr {
 table tbody td, table tbody th {
   vertical-align: top;
 }
-/* line 151, ../sass/base/_typography.scss */
+/* line 150, ../sass/base/_typography.scss */
 table td,
 table th {
   padding: 10px;
@@ -591,7 +577,7 @@ blockquote:after {
 /**
  * general content
  */
-/* line 189, ../sass/base/_typography.scss */
+/* line 182, ../sass/base/_typography.scss */
 .wysiwyg p,
 .wysiwyg ol,
 .wysiwyg ul,
@@ -667,7 +653,7 @@ input {
   font-size: 1em;
 }
 
-/* line 27, ../sass/features/_forms.scss */
+/* line 14, ../sass/features/_forms.scss */
 select,
 input[type="text"],
 input[type="date"],
@@ -687,7 +673,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 42, ../sass/features/_forms.scss */
+/* line 32, ../sass/features/_forms.scss */
 input[type="text"],
 input[type="date"],
 input[type="datetime"],
@@ -745,7 +731,7 @@ select {
   width: 100%;
 }
 
-/* line 83, ../sass/features/_forms.scss */
+/* line 80, ../sass/features/_forms.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -758,7 +744,7 @@ input[type="submit"] {
   margin: 0;
   padding: 0 10px;
 }
-/* line 93, ../sass/features/_forms.scss */
+/* line 91, ../sass/features/_forms.scss */
 button + input[type="button"],
 button + input[type="reset"],
 button + input[type="submit"],
@@ -779,12 +765,12 @@ input[type="submit"] {
   background: #ff7704;
   border-color: #ff7704;
   color: white;
-  -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-/* line 103, ../sass/features/_forms.scss */
+/* line 102, ../sass/features/_forms.scss */
 input[type="submit"]:hover, input[type="submit"]:focus {
   background: #df6600;
   border-color: #df6600;
@@ -794,13 +780,13 @@ input[type="submit"]:active {
   background: #bc5600;
   border-color: #bc5600;
 }
-/* line 113, ../sass/features/_forms.scss */
+/* line 112, ../sass/features/_forms.scss */
 input[type="submit"].field-add-more-submit, input[type="submit"]#edit-preview {
   background: #9ba2a9;
   border: 1px solid #9ba2a9;
   margin-top: 1em;
 }
-/* line 118, ../sass/features/_forms.scss */
+/* line 117, ../sass/features/_forms.scss */
 input[type="submit"].field-add-more-submit:hover, input[type="submit"].field-add-more-submit:focus, input[type="submit"]#edit-preview:hover, input[type="submit"]#edit-preview:focus {
   background: #889098;
   border-color: #889098;
@@ -811,7 +797,7 @@ input[type="submit"].field-add-more-submit:active, input[type="submit"]#edit-pre
   border-color: #757e87;
 }
 
-/* line 130, ../sass/features/_forms.scss */
+/* line 129, ../sass/features/_forms.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -834,22 +820,9 @@ textarea {
 
 /* line 144, ../sass/features/_forms.scss */
 form .description {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   font-size: 0.8em;
-}
-/* line 48, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/toolkit-1.3.8/stylesheets/toolkit/_clearfix.scss */
-form .description:before, form .description:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-/* line 55, ../../../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/toolkit-1.3.8/stylesheets/toolkit/_clearfix.scss */
-form .description:after {
-  clear: both;
 }
 
 /* line 149, ../sass/features/_forms.scss */
@@ -903,7 +876,7 @@ td > .form-item {
 .container-inline-date > .form-item {
   margin: 0;
 }
-/* line 194, ../sass/features/_forms.scss */
+/* line 193, ../sass/features/_forms.scss */
 .container-inline-date > .form-item label,
 .container-inline-date > .form-item .date-clear {
   display: inline;
@@ -1009,27 +982,27 @@ nav.menu-name-main-menu > ul {
   padding: 0;
   margin: 0;
 }
-/* line 36, ../sass/base/_mixins-extendables.scss */
+/* line 42, ../sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul li {
   list-style: none;
   margin: 0;
 }
-/* line 54, ../sass/base/_mixins-extendables.scss */
+/* line 60, ../sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul li {
   display: block;
 }
-/* line 57, ../sass/base/_mixins-extendables.scss */
+/* line 62, ../sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul li a,
 nav.menu-name-main-menu > ul li .nolink {
   display: block;
   text-decoration: none;
 }
-/* line 62, ../sass/base/_mixins-extendables.scss */
+/* line 68, ../sass/base/_mixins-extendables.scss */
 nav.menu-name-main-menu > ul .lvl-2 {
   margin: 0 10px;
   padding-left: 0;
 }
-/* line 44, ../sass/features/_navigation.scss */
+/* line 43, ../sass/features/_navigation.scss */
 nav.menu-name-main-menu > ul a,
 nav.menu-name-main-menu > ul .nolink {
   border-top: 1px solid #ff7704;
@@ -1038,12 +1011,12 @@ nav.menu-name-main-menu > ul .nolink {
   height: 3em;
   line-height: 3em;
   padding: 0 10px;
-  -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-/* line 53, ../sass/features/_navigation.scss */
+/* line 52, ../sass/features/_navigation.scss */
 nav.menu-name-main-menu > ul a:hover, nav.menu-name-main-menu > ul a:focus,
 nav.menu-name-main-menu > ul .nolink:hover,
 nav.menu-name-main-menu > ul .nolink:focus {
@@ -1067,7 +1040,7 @@ nav.menu-name-main-menu > ul .lvl-2 {
   nav.menu-name-main-menu > ul > li.expanded {
     position: relative;
   }
-  /* line 73, ../sass/features/_navigation.scss */
+  /* line 72, ../sass/features/_navigation.scss */
   nav.menu-name-main-menu > ul > li > a,
   nav.menu-name-main-menu > ul > li .nolink {
     padding-right: 50px;
@@ -1099,7 +1072,7 @@ nav.menu-name-main-menu > ul .lvl-2 {
     top: 0;
     width: 62px;
   }
-  /* line 101, ../sass/features/_navigation.scss */
+  /* line 100, ../sass/features/_navigation.scss */
   nav.menu-name-main-menu > ul > li .expand-trigger:hover, nav.menu-name-main-menu > ul > li .expand-trigger:focus {
     background-color: #ff7704;
     background-position: center -225px;
@@ -1127,12 +1100,12 @@ nav.menu-name-main-menu > ul .lvl-2 {
     margin: 0;
     font-size: 0;
   }
-  /* line 36, ../sass/base/_mixins-extendables.scss */
+  /* line 42, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul li {
     list-style: none;
     margin: 0;
   }
-  /* line 73, ../sass/base/_mixins-extendables.scss */
+  /* line 79, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul li {
     display: inline-block;
     font-size: 16px;
@@ -1140,37 +1113,37 @@ nav.menu-name-main-menu > ul .lvl-2 {
     margin: 0;
     padding: 0;
   }
-  /* line 85, ../sass/base/_mixins-extendables.scss */
+  /* line 90, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li > a,
   nav.menu-name-main-menu > ul > li .nolink {
     display: inline-block;
     text-align: center;
     text-decoration: none;
   }
-  /* line 88, ../sass/base/_mixins-extendables.scss */
+  /* line 94, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li.expanded {
     position: relative;
   }
-  /* line 92, ../sass/base/_mixins-extendables.scss */
+  /* line 98, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li:hover ul.menu {
     left: 0;
     z-index: 99;
   }
-  /* line 96, ../sass/base/_mixins-extendables.scss */
+  /* line 102, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul > li:hover a {
     white-space: nowrap;
   }
-  /* line 101, ../sass/base/_mixins-extendables.scss */
+  /* line 107, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul .lvl-2 {
     position: absolute;
     left: -9999em;
     margin: 0;
   }
-  /* line 104, ../sass/base/_mixins-extendables.scss */
+  /* line 110, ../sass/base/_mixins-extendables.scss */
   nav.menu-name-main-menu > ul .lvl-2 li {
     display: block;
   }
-  /* line 124, ../sass/features/_navigation.scss */
+  /* line 123, ../sass/features/_navigation.scss */
   nav.menu-name-main-menu > ul > li > a,
   nav.menu-name-main-menu > ul > li .nolink {
     border-top: none;
@@ -1183,7 +1156,7 @@ nav.menu-name-main-menu > ul .lvl-2 {
     color: #ff7704;
     font-weight: 700;
   }
-  /* line 133, ../sass/features/_navigation.scss */
+  /* line 131, ../sass/features/_navigation.scss */
   nav.menu-name-main-menu > ul > li > a.active-trail:hover, nav.menu-name-main-menu > ul > li > a.active-trail:active, nav.menu-name-main-menu > ul > li > a.active-trail:focus,
   nav.menu-name-main-menu > ul > li .nolink.active-trail:hover,
   nav.menu-name-main-menu > ul > li .nolink.active-trail:active,
@@ -1339,7 +1312,7 @@ div.panels-ipe-placeholder {
   background: white;
 }
 
-/* line 9, ../sass/features/_design.scss */
+/* line 8, ../sass/features/_design.scss */
 #header,
 #navigation {
   background: #222a30;

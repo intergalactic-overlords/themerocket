@@ -1,0 +1,17 @@
+name: Theme Rocket
+type: theme
+description: 'Responsive base/starter theme, used with panels.'
+core: 8.x
+stylesheets:
+  all:
+    - css/style.css
+ckeditor_stylesheets:
+    - css/ckeditor-iframe.css
+regions:
+  header: Header
+  navigation: Navigation
+  content: Content
+  footer: Footer
+  page_top: Page top
+  page_bottom: Page bottom
+  help: Help
